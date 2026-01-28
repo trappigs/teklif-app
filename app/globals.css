@@ -8,8 +8,14 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
+  --font-serif: var(--font-playfair);
+  
+  /* Brand Colors based on #045129 */
+  --color-brand: #045129;
+  --color-brand-hover: #05632e;
+  --color-brand-dark: #02361a;
+  --color-brand-light: #e6f0eb;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,0 +1,1228 @@
+[
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      },
+      {
+        "land": {
+          "id": 32,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "ÜMİTELİ, SUSURLUK, BALIKESİR ",
+          "size": "1.562 m²",
+          "price": 2343000,
+          "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+          "description": "BALIKESİR  SUSURLUK ÜMİTELİ mevkiinde, 1562.25 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "",
+          "parsel": ""
+        },
+        "offerPrice": 2343000,
+        "cashPrice": 2343000,
+        "ada": "",
+        "parsel": "",
+        "area": "1.562",
+        "option1": {
+          "price": 2577300,
+          "downPayment": 1288650,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 2835030,
+          "downPayment": 1417515,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "fyn7mk59",
+    "createdAt": "2026-01-27T16:27:54.290Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      },
+      {
+        "land": {
+          "id": 32,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "ÜMİTELİ, SUSURLUK, BALIKESİR ",
+          "size": "1.562 m²",
+          "price": 2343000,
+          "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+          "description": "BALIKESİR  SUSURLUK ÜMİTELİ mevkiinde, 1562.25 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "",
+          "parsel": ""
+        },
+        "offerPrice": 2343000,
+        "cashPrice": 2343000,
+        "ada": "",
+        "parsel": "",
+        "area": "1.562",
+        "option1": {
+          "price": 2577300,
+          "downPayment": 1288650,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 2835030,
+          "downPayment": 1417515,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "0q852did",
+    "createdAt": "2026-01-27T16:27:57.824Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      },
+      {
+        "land": {
+          "id": 32,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "ÜMİTELİ, SUSURLUK, BALIKESİR ",
+          "size": "1.562 m²",
+          "price": 2343000,
+          "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+          "description": "BALIKESİR  SUSURLUK ÜMİTELİ mevkiinde, 1562.25 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "",
+          "parsel": ""
+        },
+        "offerPrice": 2343000,
+        "cashPrice": 2343000,
+        "ada": "",
+        "parsel": "",
+        "area": "1.562",
+        "option1": {
+          "price": 2577300,
+          "downPayment": 1288650,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 2835030,
+          "downPayment": 1417515,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "zbn6pkq6",
+    "createdAt": "2026-01-27T16:28:01.280Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      },
+      {
+        "land": {
+          "id": 32,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "ÜMİTELİ, SUSURLUK, BALIKESİR ",
+          "size": "1.562 m²",
+          "price": 2343000,
+          "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+          "description": "BALIKESİR  SUSURLUK ÜMİTELİ mevkiinde, 1562.25 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "",
+          "parsel": ""
+        },
+        "offerPrice": 2343000,
+        "cashPrice": 2343000,
+        "ada": "",
+        "parsel": "",
+        "area": "1.562",
+        "option1": {
+          "price": 2577300,
+          "downPayment": 1288650,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 2835030,
+          "downPayment": 1417515,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "3mebdxq9",
+    "createdAt": "2026-01-27T16:28:03.647Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "btv4mbvj",
+    "createdAt": "2026-01-27T16:29:25.316Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "cygj6jd3",
+    "createdAt": "2026-01-27T16:29:26.854Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "qutfkfgd",
+    "createdAt": "2026-01-27T16:29:28.579Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "lrpkki8v",
+    "createdAt": "2026-01-27T16:29:50.678Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "g59f46hi",
+    "createdAt": "2026-01-27T16:29:53.793Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "r4z6woh8",
+    "createdAt": "2026-01-27T16:29:58.048Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "8r8zpw6g",
+    "createdAt": "2026-01-27T16:33:41.539Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "hpt77j2z",
+    "createdAt": "2026-01-27T16:33:51.683Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "okregs07",
+    "createdAt": "2026-01-27T16:33:53.192Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "hqbn3ft9",
+    "createdAt": "2026-01-27T16:34:08.659Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "yomojxal",
+    "createdAt": "2026-01-27T16:36:22.074Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "3x8c4owq",
+    "createdAt": "2026-01-27T16:36:23.679Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "weqh9byi",
+    "createdAt": "2026-01-27T16:36:24.706Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-03",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "q3zvia7l",
+    "createdAt": "2026-01-27T16:38:37.412Z"
+  },
+  {
+    "customerName": "Muhammed",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-04",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "vk9oq9s0",
+    "createdAt": "2026-01-28T05:59:56.855Z"
+  },
+  {
+    "customerName": "mami",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-04",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 1500000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 1650000,
+          "downPayment": 825000,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 1815000,
+          "downPayment": 907500,
+          "installmentCount": 24
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "5tikbvq1",
+    "createdAt": "2026-01-28T06:02:06.501Z"
+  },
+  {
+    "customerName": "muhammed hatay2",
+    "senderName": "Yönetici",
+    "senderTitle": "Sistem Yöneticisi",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-04",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 455000,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 500500,
+          "downPayment": 250250,
+          "installmentCount": 120
+        },
+        "option2": {
+          "price": 550550,
+          "downPayment": 275275,
+          "installmentCount": 59
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "pfs3iu9j",
+    "createdAt": "2026-01-28T06:16:42.301Z"
+  },
+  {
+    "customerName": "Furkan Hoşgör",
+    "senderName": "Semih ",
+    "senderTitle": "Arsa Yatırım Uzmanı",
+    "senderPhone": "+90 555 000 00 07",
+    "senderImage": "",
+    "validUntil": "2026-02-04",
+    "createdBy": "admin",
+    "items": [
+      {
+        "land": {
+          "id": 5,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+          "size": "303 m²",
+          "price": 455000,
+          "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "159",
+          "parsel": "8"
+        },
+        "offerPrice": 455000,
+        "cashPrice": 1499999,
+        "ada": "159",
+        "parsel": "8",
+        "area": "303",
+        "option1": {
+          "price": 1649999,
+          "downPayment": 825000,
+          "installmentCount": 12
+        },
+        "option2": {
+          "price": 1814999,
+          "downPayment": 907500,
+          "installmentCount": 24
+        }
+      },
+      {
+        "land": {
+          "id": 33,
+          "title": "Yatırımlık Fırsat - SUSURLUK",
+          "location": "ILICABOĞAZI, SUSURLUK, BALIKESİR",
+          "size": "498 m²",
+          "price": 746000,
+          "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+          "description": "BALIKESİR SUSURLUK ILICABOĞAZI mevkiinde, 497.62 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+          "features": [
+            "Müstakil Tapu",
+            "Yola Yakın",
+            "Doğa Manzaralı",
+            "Yatırımlık"
+          ],
+          "ada": "103",
+          "parsel": "70"
+        },
+        "offerPrice": 746000,
+        "cashPrice": 800000,
+        "ada": "103",
+        "parsel": "70",
+        "area": "498",
+        "option1": {
+          "price": null,
+          "downPayment": null,
+          "installmentCount": null
+        },
+        "option2": {
+          "price": null,
+          "downPayment": null,
+          "installmentCount": null
+        }
+      }
+    ],
+    "globalNotes": "",
+    "id": "ret56td2",
+    "createdAt": "2026-01-28T07:38:25.175Z"
+  }
+]

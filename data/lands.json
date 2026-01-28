@@ -1,0 +1,1124 @@
+[
+  {
+    "id": 1,
+    "title": "Göl Manzaralı Zeytinlik",
+    "location": "İznik, Bursa",
+    "size": "1.250 m²",
+    "price": 3500000,
+    "imageUrl": "https://bereketlitopraklar.com.tr/media/gsyjjygd/bereketli-topraklar-tanitim-manzarasi.webp",
+    "description": "İznik Gölü manzaralı, asırlık zeytin ağaçlarıyla çevrili, doğa ile iç içe eşsiz bir yatırım fırsatı. Bungalov yapımına uygun.",
+    "features": [
+      "Göl Manzaralı",
+      "Yol Kenarı",
+      "Elektrik Yakın",
+      "Zeytin Ağaçları"
+    ],
+    "ada": "102",
+    "parsel": "15"
+  },
+  {
+    "id": 2,
+    "title": "Kazdağları Eteğinde Çiftlik Arazisi",
+    "location": "Bayramiç, Çanakkale",
+    "size": "5.000 m²",
+    "price": 4200000,
+    "imageUrl": "https://images.unsplash.com/photo-1516216628259-2225250e87ea?q=80&w=2670&auto=format&fit=crop",
+    "description": "Kazdağları'nın bol oksijenli havasında, organik tarım ve çiftlik evi yapımı için ideal, verimli toprak yapısına sahip arazi.",
+    "features": [
+      "Organik Tarım",
+      "Su Kaynağı",
+      "Orman Kenarı",
+      "Yüksek Oksijen"
+    ],
+    "ada": "205",
+    "parsel": "4"
+  },
+  {
+    "id": 3,
+    "title": "Denize Yakın Yatırımlık Arsa",
+    "location": "Urla, İzmir",
+    "size": "750 m²",
+    "price": 8500000,
+    "imageUrl": "https://bereketlitopraklar.com.tr/media/gsyjjygd/bereketli-topraklar-tanitim-manzarasi.webpttps://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2574&auto=format&fit=crop",
+    "description": "Urla'nın yükselen değerinde, denize sadece 10 dakika mesafede, villa imarlı ve altyapısı hazır köşe parsel.",
+    "features": [
+      "Denize Yakın",
+      "Villa İmarlı",
+      "Köşe Parsel",
+      "Altyapı Hazır"
+    ],
+    "ada": "310",
+    "parsel": "12"
+  },
+  {
+    "id": 4,
+    "title": "Vadi Manzaralı Hobi Bahçesi",
+    "location": "Sapanca, Sakarya",
+    "size": "600 m²",
+    "price": 1800000,
+    "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+    "description": "Şehrin gürültüsünden uzak, hafta sonları ailenizle vakit geçirebileceğiniz, tiny house kurulumuna uygun hobi bahçesi.",
+    "features": [
+      "Doğa Manzaralı",
+      "Tiny House Uygun",
+      "Ulaşım Kolay",
+      "Tel Örgülü"
+    ],
+    "ada": "115",
+    "parsel": "8"
+  },
+  {
+    "id": 5,
+    "title": "Yatırımlık Fırsat - SUSURLUK",
+    "location": "REŞADİYE, SUSURLUK, BALIKESİR",
+    "size": "303 m²",
+    "price": 455000,
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+    "description": "BALIKESİR SUSURLUK REŞADİYE mevkiinde, 303.39 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "159",
+    "parsel": "8"
+  },
+  {
+    "id": 6,
+    "title": "Yatırımlık Fırsat - DEMİRCİ",
+    "location": "HÜDÜK, DEMİRCİ, MANİSA",
+    "size": "1.276 m²",
+    "price": 1915000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "MANİSA DEMİRCİ HÜDÜK mevkiinde, 1276.43 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "169",
+    "parsel": "6"
+  },
+  {
+    "id": 7,
+    "title": "Yatırımlık Fırsat - DEMİRCİ",
+    "location": "MİNNETLER, DEMİRCİ, MANİSA",
+    "size": "1.373 m²",
+    "price": 2059000,
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2670&auto=format&fit=crop",
+    "description": "MANİSA DEMİRCİ MİNNETLER mevkiinde, 1372.87 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "103",
+    "parsel": "557"
+  },
+  {
+    "id": 8,
+    "title": "Yatırımlık Fırsat - ALAŞEHİR",
+    "location": "KİLLİK, ALAŞEHİR, MANİSA",
+    "size": "60 m²",
+    "price": 90000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "MANİSA ALAŞEHİR KİLLİK mevkiinde, 60.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "241",
+    "parsel": "7"
+  },
+  {
+    "id": 9,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "İBİRLER, KARESİ, BALIKESİR",
+    "size": "855 m²",
+    "price": 1282000,
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ İBİRLER mevkiinde, 854.88 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "101",
+    "parsel": "6"
+  },
+  {
+    "id": 10,
+    "title": "Yatırımlık Fırsat - DEMİRCİ",
+    "location": "BOYACIK, DEMİRCİ, MANİSA",
+    "size": "1.140 m²",
+    "price": 1711000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "MANİSA DEMİRCİ BOYACIK mevkiinde, 1140.36 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "215",
+    "parsel": "20"
+  },
+  {
+    "id": 11,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "KALAYCILAR, KARESİ, BALIKESİR",
+    "size": "880 m²",
+    "price": 1320000,
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ KALAYCILAR mevkiinde, 879.72 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "105",
+    "parsel": "13"
+  },
+  {
+    "id": 12,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "NAİPLİ, KARESİ, BALIKESİR",
+    "size": "988 m²",
+    "price": 1482000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ NAİPLİ mevkiinde, 987.78 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "113",
+    "parsel": "5"
+  },
+  {
+    "id": 13,
+    "title": "Yatırımlık Fırsat - DURSUNBEY",
+    "location": "AŞAĞIMUSALAR, DURSUNBEY, BALIKESİR",
+    "size": "302 m²",
+    "price": 452000,
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+    "description": "BALIKESİR DURSUNBEY AŞAĞIMUSALAR mevkiinde, 301.66 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "170",
+    "parsel": "2"
+  },
+  {
+    "id": 14,
+    "title": "Yatırımlık Fırsat - GERMENCİK",
+    "location": "CAMİKEBİR, GERMENCİK, AYDIN",
+    "size": "270 m²",
+    "price": 405000,
+    "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2574&auto=format&fit=crop",
+    "description": "AYDIN GERMENCİK CAMİKEBİR mevkiinde, 270.15 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "316",
+    "parsel": "27"
+  },
+  {
+    "id": 15,
+    "title": "Yatırımlık Fırsat - SINDIRGI",
+    "location": "ARMUTLU, SINDIRGI, BALIKESİR",
+    "size": "549 m²",
+    "price": 824000,
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR SINDIRGI ARMUTLU mevkiinde, 549.23 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "104",
+    "parsel": "12"
+  },
+  {
+    "id": 16,
+    "title": "Yatırımlık Fırsat - DEMİRCİ",
+    "location": "KULALAR, DEMİRCİ, MANİSA",
+    "size": "1.528 m²",
+    "price": 2292000,
+    "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+    "description": "MANİSA DEMİRCİ KULALAR mevkiinde, 1528.07 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "128",
+    "parsel": "2"
+  },
+  {
+    "id": 17,
+    "title": "Yatırımlık Fırsat - GÜDÜL",
+    "location": "GÜNEYCE, GÜDÜL, ANKARA ",
+    "size": "400 m²",
+    "price": 600000,
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+    "description": "ANKARA  GÜDÜL GÜNEYCE mevkiinde, 400.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "911",
+    "parsel": "4"
+  },
+  {
+    "id": 18,
+    "title": "Yatırımlık Fırsat - GÖRDES",
+    "location": "BEĞEL, GÖRDES, MANİSA",
+    "size": "365 m²",
+    "price": 548000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "MANİSA GÖRDES BEĞEL mevkiinde, 365.42 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "103",
+    "parsel": "3"
+  },
+  {
+    "id": 19,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "BÜYÜKPINAR, KARESİ, BALIKESİR",
+    "size": "489 m²",
+    "price": 734000,
+    "imageUrl": "https://images.unsplash.com/photo-1516216628259-2225250e87ea?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ BÜYÜKPINAR mevkiinde, 489.34 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "140",
+    "parsel": "1"
+  },
+  {
+    "id": 20,
+    "title": "Yatırımlık Fırsat - SINDIRGI",
+    "location": "İBİLLER, SINDIRGI, BALIKESİR",
+    "size": "330 m²",
+    "price": 494000,
+    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop",
+    "description": "BALIKESİR SINDIRGI İBİLLER mevkiinde, 329.53 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "122",
+    "parsel": "40"
+  },
+  {
+    "id": 21,
+    "title": "Yatırımlık Fırsat - KEPSUT",
+    "location": "KAYAELİ, KEPSUT, BALIKESİR",
+    "size": "4.454 m²",
+    "price": 6682000,
+    "imageUrl": "https://images.unsplash.com/photo-1516216628259-2225250e87ea?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR KEPSUT KAYAELİ mevkiinde, 4454.48 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "173",
+    "parsel": "282"
+  },
+  {
+    "id": 22,
+    "title": "Yatırımlık Fırsat - DURSUNBEY",
+    "location": "DELİCE, DURSUNBEY, BALIKESİR",
+    "size": "308 m²",
+    "price": 462000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "BALIKESİR DURSUNBEY DELİCE mevkiinde, 307.74 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "670",
+    "parsel": "4"
+  },
+  {
+    "id": 23,
+    "title": "Yatırımlık Fırsat - DİKİLİ",
+    "location": "İSLAMLAR, DİKİLİ, İZMİR",
+    "size": "438 m²",
+    "price": 657000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "İZMİR DİKİLİ İSLAMLAR mevkiinde, 438.12 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "101",
+    "parsel": "2"
+  },
+  {
+    "id": 24,
+    "title": "Yatırımlık Fırsat - BİGA",
+    "location": "KAHVETEPE, BİGA, ÇANAKKALE",
+    "size": "471 m²",
+    "price": 706000,
+    "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2574&auto=format&fit=crop",
+    "description": "ÇANAKKALE BİGA KAHVETEPE mevkiinde, 471.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "0",
+    "parsel": "817"
+  },
+  {
+    "id": 25,
+    "title": "Yatırımlık Fırsat - ALAŞEHİR",
+    "location": "KEMALİYE, ALAŞEHİR, MANİSA",
+    "size": "403 m²",
+    "price": 604000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "MANİSA ALAŞEHİR KEMALİYE mevkiinde, 403.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "132",
+    "parsel": "2"
+  },
+  {
+    "id": 26,
+    "title": "Yatırımlık Fırsat - SINDIRGI",
+    "location": "KINIK, SINDIRGI, BALIKESİR",
+    "size": "311 m²",
+    "price": 466000,
+    "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR SINDIRGI KINIK mevkiinde, 310.9 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "315",
+    "parsel": "13"
+  },
+  {
+    "id": 27,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "KIRMIZILAR, KARESİ, BALIKESİR",
+    "size": "434 m²",
+    "price": 650000,
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ KIRMIZILAR mevkiinde, 433.54 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "180",
+    "parsel": "13"
+  },
+  {
+    "id": 28,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "KUVAYİ MİLLİYE, KARESİ, BALIKESİR",
+    "size": "321 m²",
+    "price": 482000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ KUVAYİ MİLLİYE mevkiinde, 321.12 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "14236",
+    "parsel": "20"
+  },
+  {
+    "id": 29,
+    "title": "Yatırımlık Fırsat - AKHİSAR",
+    "location": "MİLİNGE, AKHİSAR, MANİSA",
+    "size": "518 m²",
+    "price": 777000,
+    "imageUrl": "https://images.unsplash.com/photo-1516216628259-2225250e87ea?q=80&w=2670&auto=format&fit=crop",
+    "description": "MANİSA AKHİSAR MİLİNGE mevkiinde, 518.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "0",
+    "parsel": "970"
+  },
+  {
+    "id": 30,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "TOYBELEN, KARESİ, BALIKESİR",
+    "size": "815 m²",
+    "price": 1223000,
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ TOYBELEN mevkiinde, 815.21 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "120",
+    "parsel": "14"
+  },
+  {
+    "id": 31,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "TURPLU, KARESİ, BALIKESİR",
+    "size": "509 m²",
+    "price": 764000,
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ TURPLU mevkiinde, 509.17 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "139",
+    "parsel": "5"
+  },
+  {
+    "id": 32,
+    "title": "Yatırımlık Fırsat - SUSURLUK",
+    "location": "ÜMİTELİ, SUSURLUK, BALIKESİR ",
+    "size": "1.562 m²",
+    "price": 2343000,
+    "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR  SUSURLUK ÜMİTELİ mevkiinde, 1562.25 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "",
+    "parsel": ""
+  },
+  {
+    "id": 33,
+    "title": "Yatırımlık Fırsat - SUSURLUK",
+    "location": "ILICABOĞAZI, SUSURLUK, BALIKESİR",
+    "size": "498 m²",
+    "price": 746000,
+    "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR SUSURLUK ILICABOĞAZI mevkiinde, 497.62 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "103",
+    "parsel": "70"
+  },
+  {
+    "id": 34,
+    "title": "Yatırımlık Fırsat - DEMİRCİ",
+    "location": "Bardakçı, DEMİRCİ, MANİSA",
+    "size": "345 m²",
+    "price": 517000,
+    "imageUrl": "https://images.unsplash.com/photo-1516216628259-2225250e87ea?q=80&w=2670&auto=format&fit=crop",
+    "description": "MANİSA DEMİRCİ Bardakçı mevkiinde, 344.75 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "108",
+    "parsel": "6"
+  },
+  {
+    "id": 35,
+    "title": "Yatırımlık Fırsat - DURSUNBEY",
+    "location": "ÇELİKLER, DURSUNBEY, BALIKESİR",
+    "size": "871 m²",
+    "price": 1306000,
+    "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2574&auto=format&fit=crop",
+    "description": "BALIKESİR DURSUNBEY ÇELİKLER mevkiinde, 870.75 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "116",
+    "parsel": "69"
+  },
+  {
+    "id": 36,
+    "title": "Yatırımlık Fırsat - İVRİNDİ",
+    "location": "ERDEL, İVRİNDİ, BALIKESİR",
+    "size": "528 m²",
+    "price": 792000,
+    "imageUrl": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=2574&auto=format&fit=crop",
+    "description": "BALIKESİR İVRİNDİ ERDEL mevkiinde, 527.88 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "266",
+    "parsel": "8"
+  },
+  {
+    "id": 37,
+    "title": "Yatırımlık Fırsat - YENİCE",
+    "location": "KARAKÖY, YENİCE, ÇANAKKALE",
+    "size": "306 m²",
+    "price": 460000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "ÇANAKKALE YENİCE KARAKÖY mevkiinde, 306.5 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "0",
+    "parsel": "1710"
+  },
+  {
+    "id": 38,
+    "title": "Yatırımlık Fırsat - DİKİLİ",
+    "location": "KATIRALANI, DİKİLİ, İZMİR",
+    "size": "438 m²",
+    "price": 656000,
+    "imageUrl": "https://images.unsplash.com/photo-1516216628259-2225250e87ea?q=80&w=2670&auto=format&fit=crop",
+    "description": "İZMİR DİKİLİ KATIRALANI mevkiinde, 437.6 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "155",
+    "parsel": "8"
+  },
+  {
+    "id": 39,
+    "title": "Yatırımlık Fırsat - İVRİNDİ",
+    "location": "GÖZLÜÇAYIR, İVRİNDİ, BALIKESİR",
+    "size": "543 m²",
+    "price": 814000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "BALIKESİR İVRİNDİ GÖZLÜÇAYIR mevkiinde, 542.59 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "165",
+    "parsel": "58"
+  },
+  {
+    "id": 40,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "TATLIPINAR, KARESİ, BALIKESİR",
+    "size": "624 m²",
+    "price": 936000,
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ TATLIPINAR mevkiinde, 623.93 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "178",
+    "parsel": "18"
+  },
+  {
+    "id": 41,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "DAVUTLAR, KARESİ, BALIKESİR",
+    "size": "585 m²",
+    "price": 878000,
+    "imageUrl": "https://images.unsplash.com/photo-1516216628259-2225250e87ea?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ DAVUTLAR mevkiinde, 585.04 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "113",
+    "parsel": "21"
+  },
+  {
+    "id": 42,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "MALTEPE, KARESİ, BALIKESİR",
+    "size": "244 m²",
+    "price": 367000,
+    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ MALTEPE mevkiinde, 244.43 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "11633",
+    "parsel": "11"
+  },
+  {
+    "id": 43,
+    "title": "Yatırımlık Fırsat - SUSURLUK",
+    "location": "Sultançayır, SUSURLUK, BALIKESİR",
+    "size": "622 m²",
+    "price": 933000,
+    "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR SUSURLUK Sultançayır mevkiinde, 622.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "0",
+    "parsel": "976"
+  },
+  {
+    "id": 44,
+    "title": "Yatırımlık Fırsat - ŞEHZADELER",
+    "location": "TEPECİK, ŞEHZADELER, MANİSA",
+    "size": "600 m²",
+    "price": 900000,
+    "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+    "description": "MANİSA ŞEHZADELER TEPECİK mevkiinde, 600.22 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "106",
+    "parsel": "3"
+  },
+  {
+    "id": 45,
+    "title": "Yatırımlık Fırsat - YENİCE",
+    "location": "Karaköy, YENİCE, ÇANAKKALE",
+    "size": "331 m²",
+    "price": 497000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "ÇANAKKALE YENİCE Karaköy mevkiinde, 331.32 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "0",
+    "parsel": "1711"
+  },
+  {
+    "id": 46,
+    "title": "Yatırımlık Fırsat - ALTIEYLÜL",
+    "location": "DİNKÇİLER, ALTIEYLÜL, BALIKESİR",
+    "size": "308 m²",
+    "price": 462000,
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+    "description": "BALIKESİR ALTIEYLÜL DİNKÇİLER mevkiinde, 307.69 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "13131",
+    "parsel": "6"
+  },
+  {
+    "id": 47,
+    "title": "Yatırımlık Fırsat - ORHANGAZİ",
+    "location": "GEDELEK, ORHANGAZİ, BURSA",
+    "size": "3.204 m²",
+    "price": 4807000,
+    "imageUrl": "https://images.unsplash.com/photo-1516216628259-2225250e87ea?q=80&w=2670&auto=format&fit=crop",
+    "description": "BURSA ORHANGAZİ GEDELEK mevkiinde, 3204.35 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "765",
+    "parsel": "368"
+  },
+  {
+    "id": 48,
+    "title": "Yatırımlık Fırsat - FİNİKE",
+    "location": "KARŞIYAKA, FİNİKE, ANTALYA",
+    "size": "358 m²",
+    "price": 537000,
+    "imageUrl": "https://images.unsplash.com/photo-1472214103451-9374bd1c798e?q=80&w=2670&auto=format&fit=crop",
+    "description": "ANTALYA FİNİKE KARŞIYAKA mevkiinde, 358.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "446",
+    "parsel": "11"
+  },
+  {
+    "id": 49,
+    "title": "Yatırımlık Fırsat - MİHALIÇÇIK",
+    "location": "Camikebir, MİHALIÇÇIK, ESKİŞEHİR",
+    "size": "267 m²",
+    "price": 400000,
+    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop",
+    "description": "ESKİŞEHİR MİHALIÇÇIK Camikebir mevkiinde, 267.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "176",
+    "parsel": "121"
+  },
+  {
+    "id": 50,
+    "title": "Yatırımlık Fırsat - ÇAN",
+    "location": "İSTİKLAL, ÇAN, ÇANAKKALE",
+    "size": "277 m²",
+    "price": 415000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "ÇANAKKALE ÇAN İSTİKLAL mevkiinde, 276.64 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "229",
+    "parsel": "15"
+  },
+  {
+    "id": 51,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "BAKACAK, KARESİ, BALIKESİR",
+    "size": "500 m²",
+    "price": 750000,
+    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ BAKACAK mevkiinde, 499.86 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "121",
+    "parsel": "5"
+  },
+  {
+    "id": 52,
+    "title": "Yatırımlık Fırsat - BİGA",
+    "location": "ÇEŞMEALTI, BİGA, ÇANAKKALE",
+    "size": "491 m²",
+    "price": 736000,
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+    "description": "ÇANAKKALE BİGA ÇEŞMEALTI mevkiinde, 490.73 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "588",
+    "parsel": "4"
+  },
+  {
+    "id": 53,
+    "title": "Yatırımlık Fırsat - SUSURLUK",
+    "location": "DEMİRKAPI, SUSURLUK, BALIKESİR",
+    "size": "754 m²",
+    "price": 1131000,
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR SUSURLUK DEMİRKAPI mevkiinde, 754.23 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "112",
+    "parsel": "1"
+  },
+  {
+    "id": 54,
+    "title": "Yatırımlık Fırsat - SINDIRGI",
+    "location": "DERECİKÖREN, SINDIRGI, BALIKESİR",
+    "size": "344 m²",
+    "price": 515000,
+    "imageUrl": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2664&auto=format&fit=crop",
+    "description": "BALIKESİR SINDIRGI DERECİKÖREN mevkiinde, 343.53 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "205",
+    "parsel": "5"
+  },
+  {
+    "id": 55,
+    "title": "Yatırımlık Fırsat - NİLÜFER",
+    "location": "KAYAPA, NİLÜFER, BURSA",
+    "size": "650 m²",
+    "price": 975000,
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2670&auto=format&fit=crop",
+    "description": "BURSA NİLÜFER KAYAPA mevkiinde, 650.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "6404",
+    "parsel": "19"
+  },
+  {
+    "id": 56,
+    "title": "Yatırımlık Fırsat - AKHİSAR",
+    "location": "KOCAKAĞAN, AKHİSAR, MANİSA",
+    "size": "418 m²",
+    "price": 627000,
+    "imageUrl": "https://images.unsplash.com/photo-1516216628259-2225250e87ea?q=80&w=2670&auto=format&fit=crop",
+    "description": "MANİSA AKHİSAR KOCAKAĞAN mevkiinde, 418.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "234",
+    "parsel": "1"
+  },
+  {
+    "id": 57,
+    "title": "Yatırımlık Fırsat - SINDIRGI",
+    "location": "KOCASİNAN, SINDIRGI, BALIKESİR",
+    "size": "468 m²",
+    "price": 702000,
+    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop",
+    "description": "BALIKESİR SINDIRGI KOCASİNAN mevkiinde, 467.94 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "146",
+    "parsel": "6"
+  },
+  {
+    "id": 58,
+    "title": "Yatırımlık Fırsat - KEPSUT",
+    "location": "KÜÇÜKKATRANCI, KEPSUT, BALIKESİR",
+    "size": "5.273 m²",
+    "price": 7909000,
+    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop",
+    "description": "BALIKESİR KEPSUT KÜÇÜKKATRANCI mevkiinde, 5272.68 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "193",
+    "parsel": "485"
+  },
+  {
+    "id": 59,
+    "title": "Yatırımlık Fırsat - ALTIEYLÜL",
+    "location": "KÜRSE, ALTIEYLÜL, BALIKESİR",
+    "size": "804 m²",
+    "price": 1206000,
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR ALTIEYLÜL KÜRSE mevkiinde, 804.23 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "156",
+    "parsel": "1"
+  },
+  {
+    "id": 60,
+    "title": "Yatırımlık Fırsat - DURSUNBEY",
+    "location": "SELİMAĞA, DURSUNBEY, BALIKESİR",
+    "size": "758 m²",
+    "price": 1138000,
+    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop",
+    "description": "BALIKESİR DURSUNBEY SELİMAĞA mevkiinde, 758.42 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "102",
+    "parsel": "1"
+  },
+  {
+    "id": 61,
+    "title": "Yatırımlık Fırsat - ALTIEYLÜL",
+    "location": "SELİMİYE, ALTIEYLÜL, BALIKESİR",
+    "size": "562 m²",
+    "price": 843000,
+    "imageUrl": "https://images.unsplash.com/photo-1516216628259-2225250e87ea?q=80&w=2670&auto=format&fit=crop",
+    "description": "BALIKESİR ALTIEYLÜL SELİMİYE mevkiinde, 561.91 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "128",
+    "parsel": "2"
+  },
+  {
+    "id": 62,
+    "title": "Yatırımlık Fırsat - KARESİ",
+    "location": "YAYLACIK, KARESİ, BALIKESİR",
+    "size": "905 m²",
+    "price": 1358000,
+    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop",
+    "description": "BALIKESİR KARESİ YAYLACIK mevkiinde, 905.42 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "141",
+    "parsel": "6"
+  },
+  {
+    "id": 63,
+    "title": "Yatırımlık Fırsat - ALAŞEHİR",
+    "location": "YEŞİLYURT, ALAŞEHİR, MANİSA",
+    "size": "395 m²",
+    "price": 592000,
+    "imageUrl": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop",
+    "description": "MANİSA ALAŞEHİR YEŞİLYURT mevkiinde, 395.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "313",
+    "parsel": "8"
+  },
+  {
+    "id": 64,
+    "title": "Yatırımlık Fırsat - YENİŞEHİR",
+    "location": "KARAKÖY, YENİŞEHİR, BURSA",
+    "size": "819 m²",
+    "price": 1229000,
+    "imageUrl": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2670&auto=format&fit=crop",
+    "description": "BURSA YENİŞEHİR KARAKÖY mevkiinde, 819.19 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "102",
+    "parsel": "1"
+  },
+  {
+    "id": 65,
+    "title": "Yatırımlık Fırsat - SUSURLUK",
+    "location": "SULTANÇAYIR , SUSURLUK, BALIKESİR",
+    "size": "622 m²",
+    "price": 933000,
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+    "description": "BALIKESİR SUSURLUK SULTANÇAYIR  mevkiinde, 622.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "0",
+    "parsel": "976"
+  },
+  {
+    "id": 66,
+    "title": "Yatırımlık Fırsat - SUSURLUK",
+    "location": "ÜMİTELİ, SUSURLUK, BALIKESİR",
+    "size": "7.245 m²",
+    "price": 10868000,
+    "imageUrl": "https://images.unsplash.com/photo-1511497584788-876760111969?q=80&w=2664&auto=format&fit=crop",
+    "description": "BALIKESİR SUSURLUK ÜMİTELİ mevkiinde, 7245.0 m² büyüklüğünde, geleceği parlak, yatırıma uygun arazi.",
+    "features": [
+      "Müstakil Tapu",
+      "Yola Yakın",
+      "Doğa Manzaralı",
+      "Yatırımlık"
+    ],
+    "ada": "0",
+    "parsel": "1874"
+  }
+]

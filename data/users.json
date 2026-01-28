@@ -1,0 +1,58 @@
+[
+  {
+    "username": "furkan",
+    "password": "Fhosgor123+",
+    "name": "Furkan",
+    "title": "Gayrimenkul Yatırım Uzmanı",
+    "phone": "+90 555 000 00 01",
+    "image": ""
+  },
+  {
+    "username": "guray",
+    "password": "Guray123+",
+    "name": "Güray",
+    "title": "Gayrimenkul Yatırım Uzmanı",
+    "phone": "+90 555 000 00 02",
+    "image": ""
+  },
+  {
+    "username": "bilal",
+    "password": "Aktas2151+",
+    "name": "Bilal",
+    "title": "Gayrimenkul Yatırım Uzmanı",
+    "phone": "+90 555 000 00 03",
+    "image": ""
+  },
+  {
+    "username": "hasan",
+    "password": "Hasan352+",
+    "name": "Hasan",
+    "title": "Gayrimenkul Yatırım Uzmanı",
+    "phone": "+90 555 000 00 04",
+    "image": ""
+  },
+  {
+    "username": "hakan",
+    "password": "Hakanyant4124+",
+    "name": "Hakan",
+    "title": "Gayrimenkul Yatırım Uzmanı",
+    "phone": "+90 555 000 00 05",
+    "image": ""
+  },
+  {
+    "username": "semih",
+    "password": "Aygun125+",
+    "name": "Semih",
+    "title": "Gayrimenkul Yatırım Uzmanı",
+    "phone": "+90 555 000 00 06",
+    "image": ""
+  },
+  {
+    "username": "admin",
+    "password": "Merensak2151+",
+    "name": "Semih ",
+    "title": "Arsa Yatırım Uzmanı",
+    "phone": "+90 555 000 00 07",
+    "image": ""
+  }
+]
