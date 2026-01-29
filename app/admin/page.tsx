@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { getLands, addLand, updateLand, deleteLand, getProposals, getSettings, saveSettings } from '@/app/actions';
 import { logout, getSessionUser } from '@/app/auth/actions'; // getSessionUser added
 import { Land, Proposal, Settings } from '@/types';
-import { Trash2, Edit, Plus, Save, X, Lock, LogOut, FileText, Map, ExternalLink, Search, UserCircle, Phone, Briefcase, Image as ImageIcon, Download } from 'lucide-react';
+import { Trash2, Edit, Plus, Save, X, Lock, LogOut, FileText, Map, ExternalLink, Search, UserCircle, Phone, Briefcase, Image as ImageIcon, Download, BadgePercent, Check } from 'lucide-react';
 import Link from 'next/link';
 import * as XLSX from 'xlsx';
 
@@ -17,9 +17,13 @@ export default function AdminPage() {
   const [settings, setSettings] = useState<Settings>({ senderName: '', senderTitle: '', senderPhone: '', senderImage: '' });
   const [isSavingSettings, setIsSavingSettings] = useState(false);
   
+  // Lazy Load & Search State
   const [landSearch, setLandSearch] = useState('');
   const [landLimit, setLandLimit] = useState(10);
   const [hasMoreLands, setHasMoreLands] = useState(true);
+  
+  // Installment Filter
+  const [showOnlyInstallment, setShowOnlyInstallment] = useState(false);
 
   const [isEditing, setIsEditing] = useState(false);
   const [currentLand, setCurrentLand] = useState<Partial<Land>>({});
@@ -30,7 +34,7 @@ export default function AdminPage() {
 
   useEffect(() => {
     if (activeTab === 'lands') loadLands();
-  }, [landSearch, landLimit, activeTab]);
+  }, [landSearch, landLimit, activeTab, showOnlyInstallment]);
 
   const init = async () => {
     const user = await getSessionUser();
@@ -43,7 +47,7 @@ export default function AdminPage() {
   };
 
   const loadLands = async () => {
-    const data = await getLands(landSearch, landLimit + 1);
+    const data = await getLands(landSearch, landLimit + 1, showOnlyInstallment);
     if (data.length > landLimit) {
       setLands(data.slice(0, landLimit));
       setHasMoreLands(true);
@@ -126,7 +130,7 @@ export default function AdminPage() {
   };
 
   const handleAddNew = () => {
-    setCurrentLand({ title: '', location: '', size: '', price: 0, imageUrl: '', description: '', features: [], ada: '', parsel: '' });
+    setCurrentLand({ title: '', location: '', size: '', price: 0, imageUrl: '', description: '', features: [], ada: '', parsel: '', installment: false });
     setIsEditing(true);
   };
 
@@ -148,7 +152,10 @@ export default function AdminPage() {
         {/* Header & Tabs */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
           <div className="flex flex-col md:flex-row items-center gap-6">
-             <h1 className="text-3xl font-serif font-bold text-brand-dark">Yönetim Paneli</h1>
+             <div className="flex items-center gap-3">
+               <img src="/logo.webp" alt="Logo" className="w-10 h-10 object-contain" />
+               <h1 className="text-3xl font-serif font-bold text-brand-dark">Yönetim Paneli</h1>
+             </div>
              <div className="flex bg-white rounded-lg p-1 border border-stone-200 shadow-sm overflow-x-auto">
                <button onClick={() => setActiveTab('lands')} className={`px-4 py-2 rounded-md text-sm font-bold flex items-center gap-2 transition-all shrink-0 ${activeTab === 'lands' ? 'bg-brand text-white shadow-md' : 'text-stone-500 hover:text-brand-dark'}`}><Map size={16} /> Arsalar</button>
                <button onClick={() => setActiveTab('proposals')} className={`px-4 py-2 rounded-md text-sm font-bold flex items-center gap-2 transition-all shrink-0 ${activeTab === 'proposals' ? 'bg-brand text-white shadow-md' : 'text-stone-500 hover:text-brand-dark'}`}><FileText size={16} /> Tekliflerim</button>
@@ -156,45 +163,38 @@ export default function AdminPage() {
              </div>
           </div>
           
-                    <div className="flex gap-3">
-          
-                      {activeTab === 'lands' && (
-          
-                        <button onClick={handleAddNew} className="bg-brand text-white px-6 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-brand-hover transition-colors shadow-sm">
-          
-                          <Plus size={20} /> Yeni Arsa
-          
-                        </button>
-          
-                      )}
-          
-                      {activeTab === 'proposals' && (
-          
-                        <button onClick={handleExport} className="bg-emerald-600 text-white px-6 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-emerald-700 transition-colors shadow-sm">
-          
-                          <Download size={20} /> Excel'e Aktar
-          
-                        </button>
-          
-                      )}
-          
-                      <button onClick={handleLogout} className="text-red-500 hover:text-red-700 text-sm font-bold flex items-center gap-1 bg-red-50 px-4 py-2 rounded-lg transition-colors border border-red-100">
-          
-                         <LogOut size={16} /> Çıkış
-          
-                      </button>
-          
-                    </div>
-          
-          
+          <div className="flex gap-3">
+            {activeTab === 'lands' && (
+              <button onClick={handleAddNew} className="bg-brand text-white px-6 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-brand-hover transition-colors shadow-sm">
+                <Plus size={20} /> Yeni Arsa
+              </button>
+            )}
+            {activeTab === 'proposals' && (
+              <button onClick={handleExport} className="bg-emerald-600 text-white px-6 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-emerald-700 transition-colors shadow-sm">
+                <Download size={20} /> Excel'e Aktar
+              </button>
+            )}
+            <button onClick={handleLogout} className="text-red-500 hover:text-red-700 text-sm font-bold flex items-center gap-1 bg-red-50 px-4 py-2 rounded-lg transition-colors border border-red-100">
+               <LogOut size={16} /> Çıkış
+            </button>
+          </div>
         </div>
 
         {/* --- LANDS TAB --- */}
         {activeTab === 'lands' && (
           <>
-            <div className="mb-6 relative">
-              <Search className="absolute left-3 top-3 text-stone-400" size={20} />
-              <input type="text" placeholder="Arsa adına veya konumuna göre ara..." value={landSearch} onChange={(e) => { setLandSearch(e.target.value); setLandLimit(10); }} className="w-full pl-10 p-3 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand outline-none text-stone-900 bg-white shadow-sm font-medium" />
+            <div className="mb-6 flex flex-col md:flex-row gap-4">
+              <div className="relative flex-grow">
+                <Search className="absolute left-3 top-3 text-stone-400" size={20} />
+                <input type="text" placeholder="Arsa adına veya konumuna göre ara..." value={landSearch} onChange={(e) => { setLandSearch(e.target.value); setLandLimit(10); }} className="w-full pl-10 p-3 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand outline-none text-stone-900 bg-white shadow-sm font-medium" />
+              </div>
+              <button 
+                onClick={() => setShowOnlyInstallment(!showOnlyInstallment)}
+                className={`px-4 py-3 rounded-xl border font-bold flex items-center gap-2 transition-all whitespace-nowrap ${showOnlyInstallment ? 'bg-brand-light border-brand text-brand-dark' : 'bg-white border-stone-200 text-stone-500 hover:border-brand-light'}`}
+              >
+                {showOnlyInstallment ? <Check size={18} /> : <BadgePercent size={18} />}
+                Sadece Taksitliler
+              </button>
             </div>
 
             {isEditing && (
@@ -209,6 +209,16 @@ export default function AdminPage() {
                     <div><label className="block text-xs font-bold text-stone-500 mb-1">Konum</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.location} onChange={e => setCurrentLand({...currentLand, location: e.target.value})} /></div>
                     <div><label className="block text-xs font-bold text-stone-500 mb-1">Büyüklük</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.size} onChange={e => setCurrentLand({...currentLand, size: e.target.value})} /></div>
                     <div><label className="block text-xs font-bold text-stone-500 mb-1">Fiyat (TL)</label><input type="number" className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.price} onChange={e => setCurrentLand({...currentLand, price: Number(e.target.value)})} /></div>
+                    <div className="col-span-2 flex items-center gap-3 bg-stone-50 p-3 rounded-lg border border-stone-200">
+                      <input 
+                        type="checkbox" 
+                        id="installment" 
+                        checked={currentLand.installment || false} 
+                        onChange={e => setCurrentLand({...currentLand, installment: e.target.checked})} 
+                        className="w-5 h-5 text-brand rounded focus:ring-brand border-gray-300"
+                      />
+                      <label htmlFor="installment" className="text-sm font-bold text-stone-700 cursor-pointer select-none">Bu arsa için Taksit İmkanı sunuluyor</label>
+                    </div>
                     <div><label className="block text-xs font-bold text-stone-500 mb-1">Görsel URL</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.imageUrl} onChange={e => setCurrentLand({...currentLand, imageUrl: e.target.value})} />
                       {currentLand.imageUrl && (<div className="mt-2 relative h-32 w-full rounded-lg overflow-hidden border border-stone-200"><img src={currentLand.imageUrl} alt="Önizleme" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/600x400?text=Gorsel+Yok'; }} /></div>)}
                     </div>
@@ -224,11 +234,18 @@ export default function AdminPage() {
 
             <div className="grid gap-4">
               {lands.map(land => (
-                <div key={land.id} className="bg-white p-4 rounded-xl shadow-sm border border-stone-100 flex items-center justify-between hover:border-brand/30 transition-colors">
+                <div key={land.id} className="bg-white p-4 rounded-xl shadow-sm border border-stone-100 flex items-center justify-between hover:border-brand/30 transition-colors relative overflow-hidden">
+                  {land.installment && (
+                    <div className="absolute top-0 right-0 bg-brand-light text-brand-dark text-[10px] font-bold px-2 py-1 rounded-bl-lg flex items-center gap-1">
+                      <BadgePercent size={12} /> Taksitli
+                    </div>
+                  )}
                   <div className="flex items-center gap-4">
                     <img src={land.imageUrl} className="w-16 h-16 object-cover rounded-lg bg-stone-200" alt="" />
                     <div>
-                      <h3 className="font-bold text-lg text-stone-800">{land.title}</h3>
+                      <h3 className="font-bold text-lg text-stone-800 flex items-center gap-2">
+                        {land.title}
+                      </h3>
                       <div className="text-sm text-stone-500 flex gap-3"><span>{land.location}</span><span>•</span><span>{land.size}</span><span>•</span><span className="font-bold text-brand">{land.price.toLocaleString()} ₺</span></div>
                     </div>
                   </div>

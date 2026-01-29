@@ -64,12 +64,16 @@ export async function saveSettings(username: string, settings: Settings) {
 
 // --- Land Actions ---
 
-export async function getLands(search?: string, limit?: number): Promise<Land[]> {
+export async function getLands(search?: string, limit?: number, installment?: boolean): Promise<Land[]> {
   let query = supabase.from('lands').select('*').order('id', { ascending: false });
 
   if (search) {
     // Basic text search on title or location (case-insensitive via ilike)
     query = query.or(`title.ilike.%${search}%,location.ilike.%${search}%`);
+  }
+
+  if (installment) {
+    query = query.eq('installment', true);
   }
 
   if (limit) {
@@ -83,15 +87,11 @@ export async function getLands(search?: string, limit?: number): Promise<Land[]>
     return [];
   }
 
-  // Map database fields (snake_case) to typescript interface (camelCase) if needed
-  // Since we defined the table simply, let's assume they match for now or map manually.
-  // Actually, in the SQL schema I used snake_case (image_url). 
-  // We need to map `image_url` to `imageUrl` etc.
-  
+  // Map database fields (snake_case) to typescript interface (camelCase)
   return data.map((item: any) => ({
     ...item,
-    imageUrl: item.image_url, // Map image_url -> imageUrl
-    // others match (title, location, size, price, description, features, ada, parsel)
+    imageUrl: item.image_url,
+    installment: item.installment // New field
   }));
 }
 
@@ -106,7 +106,8 @@ export async function addLand(land: Omit<Land, 'id'>) {
     description: land.description,
     features: land.features,
     ada: land.ada,
-    parsel: land.parsel
+    parsel: land.parsel,
+    installment: land.installment // New field
   };
 
   const { data, error } = await supabase.from('lands').insert(dbLand).select().single();
@@ -125,7 +126,8 @@ export async function updateLand(land: Land) {
     description: land.description,
     features: land.features,
     ada: land.ada,
-    parsel: land.parsel
+    parsel: land.parsel,
+    installment: land.installment // New field
   };
 
   const { data, error } = await supabase

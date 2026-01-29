@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { Land, ProposalItem, Settings } from '@/types';
 import { saveProposal } from '@/app/actions';
 import { logout, getSessionUser } from '@/app/auth/actions';
-import { Printer, ArrowLeft, Check, FileText, Plus, Trash2, Calculator, Search, ShieldCheck, FileCheck, Map, Footprints, Gem, Share2, Copy, X, User, Briefcase, Phone, RefreshCcw } from 'lucide-react';
+import { Printer, ArrowLeft, Check, FileText, Plus, Trash2, Calculator, Search, ShieldCheck, FileCheck, Map, Footprints, Gem, Share2, Copy, X, User, Briefcase, Phone, RefreshCcw, BadgePercent } from 'lucide-react';
 
 interface ProposalContentProps {
   availableLands: Land[];
@@ -215,10 +215,13 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
 
           <header className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 relative z-10 border-b-2 border-brand/10 pb-6 gap-4 md:gap-0">
             <div>
-              <h1 className="text-2xl md:text-3xl font-serif font-bold text-brand-dark flex items-center gap-2">
-                <span className="text-brand text-3xl md:text-4xl">Bereketli</span>Topraklar
-              </h1>
-              <p className="text-stone-600 text-xs md:text-sm mt-1 tracking-wider uppercase font-medium">Gayrimenkul Yatırım & Danışmanlık</p>
+              <div className="flex items-center gap-3 mb-1">
+                <img src="/logo.webp" alt="Bereketli Topraklar" className="h-12 w-auto object-contain" />
+                <h1 className="text-2xl md:text-3xl font-serif font-bold text-brand-dark flex items-center gap-2">
+                  <span className="text-brand text-3xl md:text-4xl">Bereketli</span>Topraklar
+                </h1>
+              </div>
+              <p className="text-stone-600 text-xs md:text-sm tracking-wider uppercase font-medium pl-1">Gayrimenkul Yatırım & Danışmanlık</p>
             </div>
             <div className="text-left md:text-right">
               <h2 className="text-3xl md:text-4xl font-light text-black tracking-tighter">PORTFÖY TEKLİFİ</h2>
@@ -398,15 +401,30 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
   return (
     <div className="min-h-screen bg-stone-50 py-12">
       <div className="container mx-auto px-4 max-w-5xl">
-        <h1 className="text-3xl font-serif font-bold text-brand-dark mb-8 flex items-center gap-3"><FileText className="text-brand" /> Çoklu Teklif Oluşturucu</h1>
+        <h1 className="text-3xl font-serif font-bold text-brand-dark mb-8 flex items-center gap-3">
+          <img src="/logo.webp" alt="Logo" className="w-10 h-10 object-contain" />
+          Çoklu Teklif Oluşturucu
+        </h1>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-1 space-y-6">
             <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
-               <h3 className="font-bold text-stone-900 mb-4 border-b border-stone-100 pb-2 flex items-center gap-2"><User size={18} className="text-brand" /> Hazırlayan Bilgileri</h3>
+               <h3 className="font-bold text-stone-900 mb-4 border-b border-stone-100 pb-2 flex items-center gap-2">
+                 <User size={18} className="text-brand" /> Hazırlayan Bilgileri
+               </h3>
                <div className="space-y-4">
-                 <div><label className="block text-xs font-bold text-stone-600 mb-1 uppercase">İsim Soyisim</label><input type="text" value={senderName} onChange={(e) => setSenderName(e.target.value)} className="w-full p-2 border border-stone-300 rounded focus:ring-2 focus:ring-brand outline-none text-sm text-stone-900 font-medium" /></div>
-                 <div><label className="block text-xs font-bold text-stone-600 mb-1 uppercase">Unvan</label><input type="text" value={senderTitle} onChange={(e) => setSenderTitle(e.target.value)} className="w-full p-2 border border-stone-300 rounded focus:ring-2 focus:ring-brand outline-none text-sm text-stone-900 font-medium" /></div>
-                 <div><label className="block text-xs font-bold text-stone-600 mb-1 uppercase">Telefon</label><input type="text" value={senderPhone} onChange={(e) => setSenderPhone(e.target.value)} className="w-full p-2 border border-stone-300 rounded focus:ring-2 focus:ring-brand outline-none text-sm text-stone-900 font-medium" /></div>
+                 <div>
+                   <label className="block text-xs font-bold text-stone-600 mb-1 uppercase">İsim Soyisim</label>
+                   <input type="text" value={senderName} readOnly className="w-full p-2 border border-stone-200 rounded bg-stone-50 text-sm text-stone-500 font-medium cursor-not-allowed" />
+                 </div>
+                 <div>
+                   <label className="block text-xs font-bold text-stone-600 mb-1 uppercase">Unvan</label>
+                   <input type="text" value={senderTitle} readOnly className="w-full p-2 border border-stone-200 rounded bg-stone-50 text-sm text-stone-500 font-medium cursor-not-allowed" />
+                 </div>
+                 <div>
+                   <label className="block text-xs font-bold text-stone-600 mb-1 uppercase">Telefon</label>
+                   <input type="text" value={senderPhone} readOnly className="w-full p-2 border border-stone-200 rounded bg-stone-50 text-sm text-stone-500 font-medium cursor-not-allowed" />
+                 </div>
+                 <p className="text-[10px] text-stone-400 italic">* Bu bilgileri Profil ayarlarınızdan güncelleyebilirsiniz.</p>
                </div>
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-200">
@@ -423,7 +441,7 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
             </div>
           </div>
           <div className="md:col-span-2 space-y-6">
-            <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-200 relative z-50">
+            <div className="bg-white p-6 rounded-xl shadow-sm border border-stone-200 relative z-40">
                <label className="block text-xs font-bold text-stone-600 mb-2">Hızlı Arsa Ekle</label>
                <div className="relative">
                  <Search className="absolute left-3 top-3.5 text-stone-400" size={20} />
@@ -436,7 +454,22 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                          {filteredLands.map(l => {
                            const locParts = l.location.split(',').map(s => s.trim());
                            const formattedLoc = locParts.length >= 3 ? `${locParts[2]} / ${locParts[1]} / ${locParts[0]}` : l.location;
-                           return (<li key={l.id} onClick={() => addItemToProposal(l)} className="p-4 hover:bg-brand-light cursor-pointer border-b border-stone-50 last:border-0 transition-colors group"><div className="flex justify-between items-center"><div><div className="font-bold text-stone-800 group-hover:text-brand-dark">{formattedLoc}</div><div className="text-xs text-stone-500">{l.title}</div></div><div className="text-brand-dark font-bold bg-brand-light px-3 py-1 rounded-full">{l.price.toLocaleString()} ₺</div></div></li>);
+                           return (
+                             <li key={l.id} onClick={() => addItemToProposal(l)} className="p-4 hover:bg-brand-light cursor-pointer border-b border-stone-50 last:border-0 transition-colors group">
+                               <div className="flex justify-between items-center">
+                                 <div>
+                                   <div className="font-bold text-stone-800 group-hover:text-brand-dark flex items-center gap-2">
+                                     {formattedLoc}
+                                     {l.installment && <BadgePercent size={14} className="text-brand" />}
+                                   </div>
+                                   <div className="text-xs text-stone-500">{l.title}</div>
+                                 </div>
+                                 <div className="text-brand-dark font-bold bg-brand-light px-3 py-1 rounded-full text-xs md:text-sm whitespace-nowrap">
+                                   {l.price.toLocaleString()} ₺
+                                 </div>
+                               </div>
+                             </li>
+                           );
                          })}
                        </ul>
                      )}
@@ -450,7 +483,24 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                   <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-stone-200 relative group">
                     <button onClick={() => removeItem(index)} className="absolute top-4 right-4 text-stone-300 hover:text-red-500 transition-colors"><Trash2 size={20} /></button>
                     <button onClick={() => clearOptions(index)} className="absolute top-4 right-12 text-stone-300 hover:text-orange-500 transition-colors mr-2" title="Seçenekleri Sıfırla"><RefreshCcw size={20} /></button>
-                    <div className="flex gap-4 mb-6"><img src={item.land.imageUrl} className="w-20 h-20 object-cover rounded-lg" alt="" /><div><h4 className="font-bold text-stone-900 text-lg">{item.land.title}</h4><p className="text-stone-600 text-sm font-medium">{item.land.location} | {item.land.size}</p></div></div>
+                    <div className="flex gap-4 mb-6">
+                       <img src={item.land.imageUrl} className="w-20 h-20 object-cover rounded-lg" alt="" />
+                       <div>
+                         <div className="flex items-center gap-2 mb-1">
+                           <h4 className="font-bold text-stone-900 text-lg">{item.land.title}</h4>
+                           {item.land.installment ? (
+                             <span className="bg-brand-light text-brand-dark text-[10px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
+                               <BadgePercent size={12} /> Taksitli
+                             </span>
+                           ) : (
+                             <span className="bg-stone-100 text-stone-500 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                               Sadece Peşin
+                             </span>
+                           )}
+                         </div>
+                         <p className="text-stone-600 text-sm font-medium">{item.land.location} | {item.land.size}</p>
+                       </div>
+                    </div>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
                       <div><label className="block text-xs font-bold text-stone-600 mb-1">Peşin Fiyat (TL)</label><input type="number" value={item.cashPrice || ''} onChange={(e) => updateItem(index, 'cashPrice', parseFloat(e.target.value))} className="w-full p-2 border border-stone-300 rounded outline-none font-bold text-brand-dark bg-stone-50" /></div>
                       <div><label className="block text-xs font-bold text-stone-600 mb-1">Alan (m²)</label><input type="text" value={item.area} onChange={(e) => updateItem(index, 'area', e.target.value)} className="w-full p-2 border border-stone-300 rounded outline-none text-stone-900 bg-white" /></div>
@@ -462,8 +512,8 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                         <h5 className="font-bold text-brand-dark text-sm mb-3 border-b border-brand/10 pb-1">Seçenek 1 (Vadeli)</h5>
                         <div className="grid grid-cols-2 gap-2 mb-2">
                           <div className="col-span-2"><label className="block text-[10px] font-bold text-stone-500 mb-1">Satış Fiyatı (TL)</label><input type="number" value={item.option1.price || ''} onChange={(e) => updateItem(index, 'option1.price', parseFloat(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none font-bold text-brand" /></div>
-                          <div><label className="block text-[10px] font-bold text-stone-500 mb-1">Peşinat (TL)</label><input type="number" value={item.option1.downPayment || ''} onChange={(e) => updateItem(index, 'option1.downPayment', parseFloat(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none font-bold text-stone-900" /></div>
-                          <div><label className="block text-[10px] font-bold text-stone-500 mb-1">Taksit</label><input type="number" min="1" value={item.option1.installmentCount || ''} onChange={(e) => updateItem(index, 'option1.installmentCount', parseInt(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none font-bold text-stone-900" /></div>
+                          <div><label className="block text-[10px] font-bold text-stone-500 mb-1">Peşinat (TL)</label><input type="number" value={item.option1.downPayment || ''} onChange={(e) => updateItem(index, 'option1.downPayment', parseFloat(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none" /></div>
+                          <div><label className="block text-[10px] font-bold text-stone-500 mb-1">Taksit</label><input type="number" min="1" value={item.option1.installmentCount || ''} onChange={(e) => updateItem(index, 'option1.installmentCount', parseInt(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none" /></div>
                         </div>
                         {item.option1.installmentCount > 1 && (<div className="mt-2 text-xs text-brand-dark flex items-center gap-1"><Calculator size={12} /><strong>{calculateMonthly(item.option1.price, item.option1.downPayment, item.option1.installmentCount).toLocaleString('tr-TR', { maximumFractionDigits: 0 })} ₺/ay</strong></div>)}
                       </div>

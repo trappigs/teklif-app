@@ -32,14 +32,21 @@ export default async function SharedProposalPage({ params }: { params: Promise<{
         {/* Header */}
         <header className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 relative z-10 border-b-2 border-brand/10 pb-6 gap-4 md:gap-0">
           <div>
-            <h1 className="text-3xl font-serif font-bold text-brand-dark flex items-center gap-2">
-              <span className="text-brand text-4xl">Bereketli</span>Topraklar
-            </h1>
-            <p className="text-stone-600 text-sm mt-1 tracking-wider uppercase">Gayrimenkul Yatırım & Danışmanlık</p>
+            <div className="flex flex-row items-center gap-4 mb-2">
+              <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
+                 <img src="/logo.webp" alt="Logo" className="w-full h-full object-contain" />
+              </div>
+              <div>
+                <h1 className="text-2xl md:text-3xl font-serif font-bold text-brand-dark flex flex-wrap items-center gap-x-2 leading-tight">
+                  <span className="text-brand text-3xl md:text-4xl">Bereketli</span>Topraklar
+                </h1>
+                <p className="text-stone-600 text-xs md:text-sm tracking-wider uppercase font-medium mt-1">Gayrimenkul Yatırım & Danışmanlık</p>
+              </div>
+            </div>
           </div>
-          <div className="text-left md:text-right">
-            <h2 className="text-4xl font-light text-black">PORTFÖY TEKLİFİ</h2>
-            <p className="text-brand font-bold mt-1">#{proposal.id}</p>
+          <div className="text-left md:text-right w-full md:w-auto">
+            <h2 className="text-3xl md:text-4xl font-light text-black tracking-tighter">PORTFÖY TEKLİFİ</h2>
+            <p className="text-brand font-bold mt-1 text-base md:text-lg">#{proposal.id}</p>
           </div>
         </header>
 

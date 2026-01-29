@@ -10,11 +10,10 @@ interface NavbarContentProps {
 
 export default function NavbarContent({ isLoggedIn }: NavbarContentProps) {
   return (
-    <nav className="bg-brand-dark text-stone-50 shadow-lg sticky top-0 z-50">
+    <nav className="bg-brand-dark text-stone-50 shadow-lg sticky top-0 z-[100]">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <Link href="/" className="flex items-center space-x-2 text-2xl font-serif font-bold tracking-wide">
-          <Leaf className="text-brand w-8 h-8" />
-          <span>Bereketli<span className="text-brand">Topraklar</span></span>
+        <Link href="/" className="flex items-center">
+          <img src="/logo.webp" alt="Logo" className="h-12 w-auto object-contain" />
         </Link>
         
         {/* Menu Links - Only for Logged In Users */}

@@ -35,8 +35,8 @@ export default function LoginPage() {
         <div className="bg-brand-dark p-8 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-brand/20 rounded-bl-full -z-0" />
           <div className="relative z-10">
-            <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-4 text-brand-light">
-              <Leaf size={32} />
+            <div className="w-20 h-20 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center mx-auto mb-4 text-brand-light p-3">
+              <img src="/logo.webp" alt="Logo" className="w-full h-full object-contain drop-shadow-sm" />
             </div>
             <h1 className="text-2xl font-serif font-bold text-white mb-1">Bereketli Topraklar</h1>
             <p className="text-brand-light/80 text-sm">Uzman Girişi</p>

@@ -9,6 +9,7 @@ export interface Land {
   features: string[];
   ada?: string;
   parsel?: string;
+  installment?: boolean; // New field for internal installment option flag
 }
 
 export interface ProposalItem {
