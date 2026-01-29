@@ -51,7 +51,7 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
       }
     }
     const date = new Date();
-    date.setDate(date.getDate() + 7);
+    date.setDate(date.getDate() + 3);
     setValidUntil(date.toISOString().split('T')[0]);
   }, [initialLandId, availableLands]);
 
