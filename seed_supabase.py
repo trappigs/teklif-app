@@ -88,7 +88,7 @@ def seed_lands():
             "location": f"{neighborhood}, {district}, {city}",
             "size": f"{size_val:,.0f} m²".replace(",", "."),
             "price": estimated_price,
-            "image_url": random.choice(images),
+            "image_url": "", # No more random images
             "description": f"{city} ili, {district} ilçesi, {neighborhood} mahallesinde bulunan bu {size_val} m² büyüklüğündeki arazi, geleceği parlak ve yatırıma son derece uygundur. Doğa ile iç içe, ulaşımı kolay.",
             "features": ["Müstakil Tapu", "Yola Yakın", "Doğa Manzaralı", "Yatırımlık", "Elektrik Yakın"],
             "ada": ada,

@@ -106,7 +106,7 @@ export default async function SharedProposalPage({ params }: { params: Promise<{
                         onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                       />
                       
-                      {item.land?.image_url ? (
+                      {item.land?.image_url && item.land.image_url.trim() !== "" ? (
                         <img 
                           src={item.land.image_url} 
                           className="absolute inset-0 w-full h-full object-cover z-10"
