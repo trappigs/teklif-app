@@ -260,12 +260,22 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
               return (
                 <div key={index} className="break-inside-avoid">
                   <div className="flex flex-col md:flex-row gap-8 mb-8 border-b md:border-b-0 pb-8 md:pb-0 border-stone-100 last:border-0 last:pb-0">
-                      <div className="w-full md:w-1/3 h-64 md:h-56 rounded-2xl overflow-hidden border border-stone-200 shrink-0 shadow-sm">
+                      <div className="w-full md:w-1/3 h-64 md:h-56 rounded-2xl overflow-hidden border border-brand-dark/20 shrink-0 shadow-sm bg-brand-dark relative flex items-center justify-center p-8">
                         <img 
-                          src={item.land.imageUrl || 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1000&auto=format&fit=crop'} 
-                          className="w-full h-full object-cover" 
-                          alt={item.land.title}
+                          src="/logo.webp" 
+                          alt="Logo Placeholder" 
+                          className="w-32 h-32 object-contain brightness-0 invert"
+                          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                         />
+                        
+                        {item.land.imageUrl ? (
+                          <img 
+                            src={item.land.imageUrl} 
+                            className="absolute inset-0 w-full h-full object-cover z-10"
+                            alt={item.land.title}
+                            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                          />
+                        ) : null}
                       </div>
                       <div className="w-full md:w-2/3 flex flex-col">
                         <div className="flex flex-col md:flex-row justify-between items-start mb-3 gap-2 md:gap-0">
