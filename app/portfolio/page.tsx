@@ -70,13 +70,24 @@ export default function PortfolioPage() {
                   <BadgePercent size={14} /> Taksit İmkanı
                 </div>
               )}
-              <div className="h-56 overflow-hidden relative">
+              <div className="h-56 overflow-hidden relative bg-brand-dark flex items-center justify-center">
                 <img 
-                  src={land.imageUrl || 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1000&auto=format&fit=crop'} 
-                  alt={land.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+                  src="/logo.webp" 
+                  alt="Logo Placeholder" 
+                  className="w-24 h-24 object-contain brightness-0 invert"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />
-                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 pt-12">
+                
+                {land.imageUrl ? (
+                  <img 
+                    src={land.imageUrl} 
+                    alt={land.title} 
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-10" 
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                  />
+                ) : null}
+                
+                <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 pt-12 z-20">
                   <div className="flex items-center text-white text-sm font-medium">
                     <MapPin size={16} className="mr-1" />
                     {land.location}
