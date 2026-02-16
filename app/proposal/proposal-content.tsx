@@ -268,7 +268,7 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                         />
                         
-                        {item.land.imageUrl && item.land.imageUrl.trim() !== "" ? (
+                        {item.land?.imageUrl ? (
                           <img 
                             src={item.land.imageUrl} 
                             className="absolute inset-0 w-full h-full object-cover z-10"
