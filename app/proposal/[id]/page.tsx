@@ -149,7 +149,7 @@ export default async function SharedProposalPage({ params }: { params: Promise<{
                             {/* Option 1 */}
                             {item.option1?.price > 0 && (
                               <tr>
-                                <td className="py-3 px-2 md:px-4 font-bold text-stone-700 text-[9px] md:text-sm">12 AY</td>
+                                <td className="py-3 px-2 md:px-4 font-bold text-stone-700 text-[9px] md:text-sm uppercase">{item.option1.installmentCount} AY VADE</td>
                                 <td className="py-3 px-2 md:px-4 text-right whitespace-nowrap">{item.option1.price.toLocaleString('tr-TR')} ₺</td>
                                 <td className="py-3 px-2 md:px-4 text-right whitespace-nowrap">{item.option1.downPayment.toLocaleString('tr-TR')} ₺</td>
                                 <td className="py-3 px-2 md:px-4 text-right font-bold text-brand whitespace-nowrap">
@@ -160,7 +160,7 @@ export default async function SharedProposalPage({ params }: { params: Promise<{
                             {/* Option 2 */}
                             {item.option2?.price > 0 && (
                               <tr>
-                                <td className="py-3 px-2 md:px-4 font-bold text-stone-700 text-[9px] md:text-sm">24 AY</td>
+                                <td className="py-3 px-2 md:px-4 font-bold text-stone-700 text-[9px] md:text-sm uppercase">{item.option2.installmentCount} AY VADE</td>
                                 <td className="py-3 px-2 md:px-4 text-right whitespace-nowrap">{item.option2.price.toLocaleString('tr-TR')} ₺</td>
                                 <td className="py-3 px-2 md:px-4 text-right whitespace-nowrap">{item.option2.downPayment.toLocaleString('tr-TR')} ₺</td>
                                 <td className="py-3 px-2 md:px-4 text-right font-bold text-emerald-700 whitespace-nowrap">

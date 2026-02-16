@@ -148,12 +148,12 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
   };
 
   const calculateMonthly = (price: number, down: number, count: number) => {
-    if (count <= 1) return 0;
-    return (price - down) / count;
+    if (!price || !count || count <= 1) return 0;
+    return (price - (down || 0)) / count;
   };
 
   const calculateTotal = () => {
-    return proposalItems.reduce((acc, item) => acc + item.cashPrice, 0);
+    return proposalItems.reduce((acc, item) => acc + (item.cashPrice || 0), 0);
   };
 
   const handleShowPreview = () => {
@@ -184,11 +184,11 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                 <p className="text-stone-500 mt-2 text-sm">Aşağıdaki linki kopyalayarak müşterinizle paylaşabilirsiniz.</p>
               </div>
               <div className="flex gap-2 mb-6">
-                <input type="text" readOnly value={shareLink} className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg text-xs text-stone-600 outline-none" />
+                <input type="text" readOnly value={shareLink} className="w-full p-3 bg-stone-50 border border-stone-200 rounded-lg text-xs text-stone-600 outline-none truncate" />
                 <button onClick={() => { navigator.clipboard.writeText(shareLink); alert('Link kopyalandı!'); }} className="bg-brand text-white p-3 rounded-lg hover:bg-brand-hover"><Copy size={20} /></button>
               </div>
               <div className="flex flex-col gap-3">
-                <a href={`https://wa.me/?text=Sizin%20için%20hazırladığımız%20teklifi%20inceleyebilirsiniz:%20${shareLink}`} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white py-4 rounded-xl font-bold text-center hover:opacity-90 transition-all flex items-center justify-center gap-2">WhatsApp ile Gönder</a>
+                <a href={`https://wa.me/?text=Sizin%20için%20hazırladığımız%20teklifi%20inceleyebilirsiniz:%20${shareLink}`} target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white py-4 rounded-xl font-bold text-center hover:opacity-90 transition-all flex items-center justify-center gap-2 text-sm">WhatsApp ile Gönder</a>
                 <button onClick={() => setIsModalOpen(false)} className="bg-stone-100 text-stone-600 py-3 rounded-xl font-bold hover:bg-stone-200 transition-colors text-sm">Kapat</button>
               </div>
             </div>
@@ -216,14 +216,18 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
           <header className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 relative z-10 border-b-2 border-brand/10 pb-6 gap-4 md:gap-0">
             <div>
               <div className="flex items-center gap-3 mb-1">
-                <img src="/logo.webp" alt="Bereketli Topraklar" className="h-12 w-auto object-contain" />
-                <h1 className="text-2xl md:text-3xl font-serif font-bold text-brand-dark flex items-center gap-2">
-                  <span className="text-brand text-3xl md:text-4xl">Bereketli</span>Topraklar
-                </h1>
+                <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
+                   <img src="/logo.webp" alt="Logo" className="w-full h-full object-contain" />
+                </div>
+                <div>
+                  <h1 className="text-2xl md:text-3xl font-serif font-bold text-brand-dark flex flex-wrap items-center gap-x-2 leading-tight">
+                    <span className="text-brand text-3xl md:text-4xl">Bereketli</span>Topraklar
+                  </h1>
+                  <p className="text-stone-600 text-xs md:text-sm tracking-wider uppercase font-medium mt-1">Gayrimenkul Yatırım & Danışmanlık</p>
+                </div>
               </div>
-              <p className="text-stone-600 text-xs md:text-sm tracking-wider uppercase font-medium pl-1">Gayrimenkul Yatırım & Danışmanlık</p>
             </div>
-            <div className="text-left md:text-right">
+            <div className="text-left md:text-right w-full md:w-auto">
               <h2 className="text-3xl md:text-4xl font-light text-black tracking-tighter">PORTFÖY TEKLİFİ</h2>
               <p className="text-brand font-bold mt-1 text-base md:text-lg">#TASLAK</p>
             </div>
@@ -260,14 +264,13 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
               return (
                 <div key={index} className="break-inside-avoid">
                   <div className="flex flex-col md:flex-row gap-8 mb-8 border-b md:border-b-0 pb-8 md:pb-0 border-stone-100 last:border-0 last:pb-0">
-                      <div className="w-full md:w-1/3 h-64 md:h-56 rounded-2xl overflow-hidden border border-brand-dark/20 shrink-0 shadow-sm bg-brand-dark relative flex items-center justify-center p-8">
+                      <div className="w-full md:w-1/3 h-64 md:h-56 rounded-2xl overflow-hidden border border-stone-200 shrink-0 shadow-sm bg-brand-dark relative flex items-center justify-center p-8">
                         <img 
                           src="/logo.webp" 
                           alt="Logo Placeholder" 
                           className="w-32 h-32 object-contain brightness-0 invert"
                           onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                         />
-                        
                         {item.land?.imageUrl ? (
                           <img 
                             src={item.land.imageUrl} 
@@ -289,7 +292,7 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                         </div>
                         <div className="bg-white rounded-xl border border-stone-200 overflow-hidden shadow-sm">
                           <table className="w-full text-left table-fixed">
-                            <thead className="bg-stone-50 text-stone-500 uppercase text-[9px] md:text-[10px] font-bold tracking-widest border-b border-stone-200">
+                            <thead className="bg-stone-50 text-stone-500 uppercase text-[8px] md:text-[10px] font-bold tracking-widest border-b border-stone-200">
                               <tr>
                                 <th className="py-2.5 px-2 md:px-4 w-[25%]">Plan</th>
                                 <th className="py-2.5 px-2 md:px-4 text-right w-[25%]">Fiyat</th>
@@ -300,21 +303,21 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                             <tbody className="divide-y divide-stone-100 text-[10px] md:text-sm">
                               <tr className="bg-brand-light/5">
                                 <td className="py-3 px-2 md:px-4 font-bold text-brand-dark">PEŞİN</td>
-                                <td className="py-3 px-2 md:px-4 text-right font-bold whitespace-nowrap text-brand-dark">{item.cashPrice.toLocaleString('tr-TR')} ₺</td>
+                                <td className="py-3 px-2 md:px-4 text-right font-bold whitespace-nowrap text-brand-dark">{(item.cashPrice || 0).toLocaleString('tr-TR')} ₺</td>
                                 <td className="py-3 px-2 md:px-4 text-right text-stone-400">-</td>
                                 <td className="py-3 px-2 md:px-4 text-right font-bold whitespace-nowrap text-brand-dark">Nakit</td>
                               </tr>
                               {item.option1.price > 0 && (
                                 <tr>
-                                  <td className="py-3 px-2 md:px-4 font-bold text-stone-700">12 AY</td>
+                                  <td className="py-3 px-2 md:px-4 font-bold text-stone-700 uppercase">{item.option1.installmentCount} AY VADE</td>
                                   <td className="py-3 px-2 md:px-4 text-right whitespace-nowrap">{item.option1.price.toLocaleString('tr-TR')} ₺</td>
                                   <td className="py-3 px-2 md:px-4 text-right whitespace-nowrap">{item.option1.downPayment.toLocaleString('tr-TR')} ₺</td>
                                   <td className="py-3 px-2 md:px-4 text-right font-bold text-brand whitespace-nowrap">{item.option1.installmentCount}x {calculateMonthly(item.option1.price, item.option1.downPayment, item.option1.installmentCount).toLocaleString('tr-TR', { maximumFractionDigits: 0 })} ₺</td>
                                 </tr>
                               )}
-                              {(item.option2.price > 0) && (
+                              {item.option2.price > 0 && (
                                 <tr>
-                                  <td className="py-3 px-2 md:px-4 font-bold text-stone-700">24 AY</td>
+                                  <td className="py-3 px-2 md:px-4 font-bold text-stone-700 uppercase">{item.option2.installmentCount} AY VADE</td>
                                   <td className="py-3 px-2 md:px-4 text-right whitespace-nowrap">{item.option2.price.toLocaleString('tr-TR')} ₺</td>
                                   <td className="py-3 px-2 md:px-4 text-right whitespace-nowrap">{item.option2.downPayment.toLocaleString('tr-TR')} ₺</td>
                                   <td className="py-3 px-2 md:px-4 text-right font-bold text-emerald-700 whitespace-nowrap">{item.option2.installmentCount}x {calculateMonthly(item.option2.price, item.option2.downPayment, item.option2.installmentCount).toLocaleString('tr-TR', { maximumFractionDigits: 0 })} ₺</td>
@@ -381,7 +384,7 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                 </div>
                 <div>
                    <h4 className="text-stone-900 font-bold text-lg leading-tight">{senderName}</h4>
-                   <p className="text-brand font-medium text-xs uppercase tracking-wider mt-1">{senderTitle}</p>
+                   <p className="text-brand font-medium text-[10px] uppercase tracking-wider mt-1">{senderTitle}</p>
                    <div className="flex items-center gap-2 text-stone-600 mt-3 text-sm font-medium">
                       <Phone size={14} className="text-brand" />
                       <span>{senderPhone}</span>
@@ -522,17 +525,17 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                         <h5 className="font-bold text-brand-dark text-sm mb-3 border-b border-brand/10 pb-1">Seçenek 1 (Vadeli)</h5>
                         <div className="grid grid-cols-2 gap-2 mb-2">
                           <div className="col-span-2"><label className="block text-[10px] font-bold text-stone-500 mb-1">Satış Fiyatı (TL)</label><input type="number" value={item.option1.price || ''} onChange={(e) => updateItem(index, 'option1.price', parseFloat(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none font-bold text-brand" /></div>
-                          <div><label className="block text-[10px] font-bold text-stone-500 mb-1">Peşinat (TL)</label><input type="number" value={item.option1.downPayment || ''} onChange={(e) => updateItem(index, 'option1.downPayment', parseFloat(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none" /></div>
-                          <div><label className="block text-[10px] font-bold text-stone-500 mb-1">Taksit</label><input type="number" min="1" value={item.option1.installmentCount || ''} onChange={(e) => updateItem(index, 'option1.installmentCount', parseInt(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none" /></div>
+                          <div><label className="block text-[10px] font-bold text-stone-500 mb-1">Peşinat (TL)</label><input type="number" value={item.option1.downPayment || ''} onChange={(e) => updateItem(index, 'option1.downPayment', parseFloat(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none font-bold text-stone-900 placeholder-stone-300" /></div>
+                          <div><label className="block text-[10px] font-bold text-stone-500 mb-1">Taksit</label><input type="number" min="1" value={item.option1.installmentCount || ''} onChange={(e) => updateItem(index, 'option1.installmentCount', parseInt(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none font-bold text-stone-900 placeholder-stone-300" /></div>
                         </div>
                         {item.option1.installmentCount > 1 && (<div className="mt-2 text-xs text-brand-dark flex items-center gap-1"><Calculator size={12} /><strong>{calculateMonthly(item.option1.price, item.option1.downPayment, item.option1.installmentCount).toLocaleString('tr-TR', { maximumFractionDigits: 0 })} ₺/ay</strong></div>)}
                       </div>
                       <div>
                         <h5 className="font-bold text-emerald-800 text-sm mb-3 border-b border-emerald-100 pb-1">Seçenek 2 (Vadeli)</h5>
                         <div className="grid grid-cols-2 gap-2 mb-2">
-                          <div className="col-span-2"><label className="block text-[10px] font-bold text-stone-500 mb-1">Satış Fiyatı (TL)</label><input type="number" value={item.option2.price || ''} onChange={(e) => updateItem(index, 'option2.price', parseFloat(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none font-bold text-emerald-900" /></div>
-                          <div><label className="block text-[10px] font-bold text-stone-500 mb-1">Peşinat (TL)</label><input type="number" value={item.option2.downPayment || ''} onChange={(e) => updateItem(index, 'option2.downPayment', parseFloat(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none font-bold text-stone-900" /></div>
-                          <div><label className="block text-[10px] font-bold text-stone-500 mb-1">Taksit</label><input type="number" min="1" value={item.option2.installmentCount || ''} onChange={(e) => updateItem(index, 'option2.installmentCount', parseInt(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none font-bold text-stone-900" /></div>
+                          <div className="col-span-2"><label className="block text-[10px] font-bold text-stone-500 mb-1">Satış Fiyatı (TL)</label><input type="number" value={item.option2.price || ''} onChange={(e) => updateItem(index, 'option2.price', parseFloat(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none font-bold text-emerald-900 placeholder-stone-300" /></div>
+                          <div><label className="block text-[10px] font-bold text-stone-500 mb-1">Peşinat (TL)</label><input type="number" value={item.option2.downPayment || ''} onChange={(e) => updateItem(index, 'option2.downPayment', parseFloat(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none font-bold text-stone-900 placeholder-stone-300" /></div>
+                          <div><label className="block text-[10px] font-bold text-stone-500 mb-1">Taksit</label><input type="number" min="1" value={item.option2.installmentCount || ''} onChange={(e) => updateItem(index, 'option2.installmentCount', parseInt(e.target.value))} className="w-full p-2 border border-stone-200 rounded text-sm outline-none font-bold text-stone-900 placeholder-stone-300" /></div>
                         </div>
                         {item.option2.installmentCount > 1 && (<div className="mt-2 text-xs text-emerald-700 flex items-center gap-1"><Calculator size={12} /><strong>{calculateMonthly(item.option2.price, item.option2.downPayment, item.option2.installmentCount).toLocaleString('tr-TR', { maximumFractionDigits: 0 })} ₺/ay</strong></div>)}
                       </div>
