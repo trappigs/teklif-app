@@ -5,7 +5,7 @@ export interface Land {
   size: string;
   price: number;
   imageUrl: string;
-  description: string;
+  description: string | null;
   features: string[];
   ada?: string;
   parsel?: string;
