@@ -12,9 +12,9 @@ export default async function Home() {
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
-           <img 
-            src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=2670&auto=format&fit=crop" 
-            alt="Nature Background" 
+          <img
+            src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?q=80&w=2670&auto=format&fit=crop"
+            alt="Nature Background"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
@@ -45,7 +45,7 @@ export default async function Home() {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-dark mb-4">Neden Biz?</h2>
             <div className="w-24 h-1 bg-brand mx-auto rounded-full" />
           </div>
-          
+
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center p-8 rounded-2xl bg-stone-50 border border-stone-100 hover:shadow-xl transition-all group">
               <div className="w-16 h-16 bg-brand-light text-brand rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-brand group-hover:text-white transition-colors">
@@ -95,7 +95,13 @@ export default async function Home() {
             {featuredLands.map((land) => (
               <div key={land.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-300 group">
                 <div className="relative h-64 overflow-hidden">
-                  <img src={land.imageUrl} alt={land.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                  {land.imageUrl ? (
+                    <img src={land.imageUrl} alt={land.title} className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" />
+                  ) : (
+                    <div className="w-full h-full bg-stone-200 flex items-center justify-center text-stone-400 transform group-hover:scale-110 transition-transform duration-700">
+                      Resim Yok
+                    </div>
+                  )}
                   <div className="absolute top-4 right-4 bg-white/90 backdrop-blur text-brand-dark font-bold px-3 py-1 rounded-full text-sm">
                     {land.size}
                   </div>
@@ -117,9 +123,9 @@ export default async function Home() {
               </div>
             ))}
           </div>
-          
+
           <div className="mt-12 text-center md:hidden">
-             <Link href="/portfolio" className="inline-flex items-center gap-2 text-brand font-bold">
+            <Link href="/portfolio" className="inline-flex items-center gap-2 text-brand font-bold">
               Tüm Portföyü Gör <ArrowRight size={20} />
             </Link>
           </div>

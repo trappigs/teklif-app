@@ -241,7 +241,7 @@ export default function AdminPage() {
                     </div>
                   )}
                   <div className="flex items-center gap-4">
-                    <img src={land.imageUrl} className="w-16 h-16 object-cover rounded-lg bg-stone-200" alt="" />
+                    <img src={land.imageUrl || undefined} className="w-16 h-16 object-cover rounded-lg bg-stone-200" alt="" />
                     <div>
                       <h3 className="font-bold text-lg text-stone-800 flex items-center gap-2">
                         {land.title}
