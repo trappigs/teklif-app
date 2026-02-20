@@ -184,8 +184,7 @@ export default function ProposalView({ proposal }: ProposalViewProps) {
                     </div>
                 </div>
 
-                <div className="mt-12 pt-8 border-t border-stone-200 flex justify-between items-center text-xs text-stone-500 relative z-10 break-inside-avoid">
-                    <div>Bu belge bilgilendirme amaçlıdır. {proposal.createdAt ? new Date(proposal.createdAt).toLocaleDateString('tr-TR') : ''}</div>
+                <div className="mt-12 pt-8 border-t border-stone-200 flex justify-end items-center text-xs text-stone-500 relative z-10 break-inside-avoid">
                     <div className="text-stone-400 italic">Bereketli Topraklar Gayrimenkul</div>
                 </div>
             </div>
