@@ -5,7 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { Land, ProposalItem, Settings } from '@/types';
 import { saveProposal } from '@/app/actions';
 import { logout, getSessionUser } from '@/app/auth/actions';
-import { Plus, Trash2, Save, ExternalLink, RefreshCw, X, ChevronDown, ChevronUp, Copy, Check, Trash, User, Phone, ArrowLeft, Search, BadgePercent, FileText, Calculator, Briefcase, Share2, FileText as FileIcon } from 'lucide-react';
+import { Plus, Trash2, Save, ExternalLink, RefreshCw, X, ChevronDown, ChevronUp, Copy, Check, Trash, User, Phone, ArrowLeft, Search, BadgePercent, FileText, Calculator, Briefcase, Share2, Map, FileText as FileIcon } from 'lucide-react';
 
 interface ProposalContentProps {
   availableLands: Land[];
@@ -456,7 +456,13 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                     <button onClick={() => removeItem(index)} className="absolute top-4 right-4 text-stone-300 hover:text-red-500 transition-colors"><Trash2 size={20} /></button>
                     <button onClick={() => clearOptions(index)} className="absolute top-4 right-12 text-stone-300 hover:text-orange-500 transition-colors mr-2" title="Tüm Bilgileri Temizle"><RefreshCw size={20} /></button>
                     <div className="flex gap-4 mb-6">
-                      <img src={item.land.imageUrl} className="w-20 h-20 object-cover rounded-lg" alt="" />
+                      {item.land.imageUrl ? (
+                        <img src={item.land.imageUrl} className="w-20 h-20 object-cover rounded-lg" alt="" />
+                      ) : (
+                        <div className="w-20 h-20 bg-stone-100 rounded-lg flex items-center justify-center text-stone-300">
+                          <Map size={24} />
+                        </div>
+                      )}
                       <div>
                         <div className="flex items-center gap-2 mb-1">
                           <h4 className="font-bold text-stone-900 text-lg">{item.land.title}</h4>
