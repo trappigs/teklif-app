@@ -30,7 +30,7 @@ export default function ProposalView({ proposal }: ProposalViewProps) {
                     <div>
                         <div className="flex flex-row items-center gap-4 mb-2">
                             <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
-                                <img src="/logo.webp" alt="Logo" className="w-full h-full object-contain" />
+                                <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
                             </div>
                             <div>
                                 <h1 className="text-2xl md:text-3xl font-serif font-bold text-brand-dark flex flex-wrap items-center gap-x-2 leading-tight">
@@ -82,7 +82,7 @@ export default function ProposalView({ proposal }: ProposalViewProps) {
                                 <div className="flex flex-col md:flex-row gap-8 mb-8 border-b md:border-b-0 pb-8 md:pb-0 border-stone-100 last:border-0 last:pb-0 print:flex-row">
                                     <div className="w-full md:w-1/3 h-64 md:h-56 rounded-2xl overflow-hidden border border-brand-dark/20 shrink-0 shadow-sm bg-brand-dark relative flex items-center justify-center p-8">
                                         <img
-                                            src="/logo.webp"
+                                            src="/logo.png"
                                             alt="Logo Placeholder"
                                             className="w-32 h-32 object-contain brightness-0 invert"
                                             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
