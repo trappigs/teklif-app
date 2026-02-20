@@ -11,17 +11,17 @@ import * as XLSX from 'xlsx';
 export default function AdminPage() {
   const [activeTab, setActiveTab] = useState<'lands' | 'proposals' | 'profile'>('lands');
   const [username, setUsername] = useState<string | null>(null);
-  
+
   const [lands, setLands] = useState<Land[]>([]);
   const [proposals, setProposals] = useState<Proposal[]>([]);
   const [settings, setSettings] = useState<Settings>({ senderName: '', senderTitle: '', senderPhone: '', senderImage: '' });
   const [isSavingSettings, setIsSavingSettings] = useState(false);
-  
+
   // Lazy Load & Search State
   const [landSearch, setLandSearch] = useState('');
   const [landLimit, setLandLimit] = useState(10);
   const [hasMoreLands, setHasMoreLands] = useState(true);
-  
+
   // Installment Filter
   const [showOnlyInstallment, setShowOnlyInstallment] = useState(false);
 
@@ -68,7 +68,7 @@ export default function AdminPage() {
 
   const handleExport = () => {
     // Flatten proposals data for Excel
-    const exportData = proposals.flatMap(p => 
+    const exportData = proposals.flatMap(p =>
       p.items.map(item => ({
         'Teklif ID': p.id,
         'Oluşturulma Tarihi': new Date(p.createdAt).toLocaleDateString('tr-TR'),
@@ -95,7 +95,7 @@ export default function AdminPage() {
     const ws = XLSX.utils.json_to_sheet(exportData);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "Teklifler");
-    
+
     // Auto-width for columns
     const wscols = Object.keys(exportData[0] || {}).map(k => ({ wch: 20 }));
     ws['!cols'] = wscols;
@@ -148,21 +148,21 @@ export default function AdminPage() {
   return (
     <div className="min-h-screen bg-stone-50 p-4 md:p-8">
       <div className="container mx-auto max-w-6xl">
-        
+
         {/* Header & Tabs */}
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
           <div className="flex flex-col md:flex-row items-center gap-6">
-             <div className="flex items-center gap-3">
-               <img src="/logo.webp" alt="Logo" className="w-10 h-10 object-contain" />
-               <h1 className="text-3xl font-serif font-bold text-brand-dark">Yönetim Paneli</h1>
-             </div>
-             <div className="flex bg-white rounded-lg p-1 border border-stone-200 shadow-sm overflow-x-auto">
-               <button onClick={() => setActiveTab('lands')} className={`px-4 py-2 rounded-md text-sm font-bold flex items-center gap-2 transition-all shrink-0 ${activeTab === 'lands' ? 'bg-brand text-white shadow-md' : 'text-stone-500 hover:text-brand-dark'}`}><Map size={16} /> Arsalar</button>
-               <button onClick={() => setActiveTab('proposals')} className={`px-4 py-2 rounded-md text-sm font-bold flex items-center gap-2 transition-all shrink-0 ${activeTab === 'proposals' ? 'bg-brand text-white shadow-md' : 'text-stone-500 hover:text-brand-dark'}`}><FileText size={16} /> Tekliflerim</button>
-               <button onClick={() => setActiveTab('profile')} className={`px-4 py-2 rounded-md text-sm font-bold flex items-center gap-2 transition-all shrink-0 ${activeTab === 'profile' ? 'bg-brand text-white shadow-md' : 'text-stone-500 hover:text-brand-dark'}`}><UserCircle size={16} /> Profil</button>
-             </div>
+            <div className="flex items-center gap-3">
+              <img src="/logo.webp" alt="Logo" className="w-10 h-10 object-contain" />
+              <h1 className="text-3xl font-serif font-bold text-brand-dark">Yönetim Paneli</h1>
+            </div>
+            <div className="flex bg-white rounded-lg p-1 border border-stone-200 shadow-sm overflow-x-auto">
+              <button onClick={() => setActiveTab('lands')} className={`px-4 py-2 rounded-md text-sm font-bold flex items-center gap-2 transition-all shrink-0 ${activeTab === 'lands' ? 'bg-brand text-white shadow-md' : 'text-stone-500 hover:text-brand-dark'}`}><Map size={16} /> Arsalar</button>
+              <button onClick={() => setActiveTab('proposals')} className={`px-4 py-2 rounded-md text-sm font-bold flex items-center gap-2 transition-all shrink-0 ${activeTab === 'proposals' ? 'bg-brand text-white shadow-md' : 'text-stone-500 hover:text-brand-dark'}`}><FileText size={16} /> Tekliflerim</button>
+              <button onClick={() => setActiveTab('profile')} className={`px-4 py-2 rounded-md text-sm font-bold flex items-center gap-2 transition-all shrink-0 ${activeTab === 'profile' ? 'bg-brand text-white shadow-md' : 'text-stone-500 hover:text-brand-dark'}`}><UserCircle size={16} /> Profil</button>
+            </div>
           </div>
-          
+
           <div className="flex gap-3">
             {activeTab === 'lands' && (
               <button onClick={handleAddNew} className="bg-brand text-white px-6 py-2 rounded-lg font-bold flex items-center gap-2 hover:bg-brand-hover transition-colors shadow-sm">
@@ -175,7 +175,7 @@ export default function AdminPage() {
               </button>
             )}
             <button onClick={handleLogout} className="text-red-500 hover:text-red-700 text-sm font-bold flex items-center gap-1 bg-red-50 px-4 py-2 rounded-lg transition-colors border border-red-100">
-               <LogOut size={16} /> Çıkış
+              <LogOut size={16} /> Çıkış
             </button>
           </div>
         </div>
@@ -188,7 +188,7 @@ export default function AdminPage() {
                 <Search className="absolute left-3 top-3 text-stone-400" size={20} />
                 <input type="text" placeholder="Arsa adına veya konumuna göre ara..." value={landSearch} onChange={(e) => { setLandSearch(e.target.value); setLandLimit(10); }} className="w-full pl-10 p-3 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand outline-none text-stone-900 bg-white shadow-sm font-medium" />
               </div>
-              <button 
+              <button
                 onClick={() => setShowOnlyInstallment(!showOnlyInstallment)}
                 className={`px-4 py-3 rounded-xl border font-bold flex items-center gap-2 transition-all whitespace-nowrap ${showOnlyInstallment ? 'bg-brand-light border-brand text-brand-dark' : 'bg-white border-stone-200 text-stone-500 hover:border-brand-light'}`}
               >
@@ -205,27 +205,27 @@ export default function AdminPage() {
                     <button onClick={() => setIsEditing(false)}><X size={24} className="text-stone-400 hover:text-red-500" /></button>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="col-span-2"><label className="block text-xs font-bold text-stone-500 mb-1">Başlık</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.title} onChange={e => setCurrentLand({...currentLand, title: e.target.value})} /></div>
-                    <div><label className="block text-xs font-bold text-stone-500 mb-1">Konum</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.location} onChange={e => setCurrentLand({...currentLand, location: e.target.value})} /></div>
-                    <div><label className="block text-xs font-bold text-stone-500 mb-1">Büyüklük</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.size} onChange={e => setCurrentLand({...currentLand, size: e.target.value})} /></div>
-                    <div><label className="block text-xs font-bold text-stone-500 mb-1">Fiyat (TL)</label><input type="number" className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.price} onChange={e => setCurrentLand({...currentLand, price: Number(e.target.value)})} /></div>
+                    <div className="col-span-2"><label className="block text-xs font-bold text-stone-500 mb-1">Başlık</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.title} onChange={e => setCurrentLand({ ...currentLand, title: e.target.value })} /></div>
+                    <div><label className="block text-xs font-bold text-stone-500 mb-1">Konum</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.location} onChange={e => setCurrentLand({ ...currentLand, location: e.target.value })} /></div>
+                    <div><label className="block text-xs font-bold text-stone-500 mb-1">Büyüklük</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.size} onChange={e => setCurrentLand({ ...currentLand, size: e.target.value })} /></div>
+                    <div><label className="block text-xs font-bold text-stone-500 mb-1">Fiyat (TL)</label><input type="number" className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.price} onChange={e => setCurrentLand({ ...currentLand, price: Number(e.target.value) })} /></div>
                     <div className="col-span-2 flex items-center gap-3 bg-stone-50 p-3 rounded-lg border border-stone-200">
-                      <input 
-                        type="checkbox" 
-                        id="installment" 
-                        checked={currentLand.installment || false} 
-                        onChange={e => setCurrentLand({...currentLand, installment: e.target.checked})} 
+                      <input
+                        type="checkbox"
+                        id="installment"
+                        checked={currentLand.installment || false}
+                        onChange={e => setCurrentLand({ ...currentLand, installment: e.target.checked })}
                         className="w-5 h-5 text-brand rounded focus:ring-brand border-gray-300"
                       />
                       <label htmlFor="installment" className="text-sm font-bold text-stone-700 cursor-pointer select-none">Bu arsa için Taksit İmkanı sunuluyor</label>
                     </div>
-                    <div><label className="block text-xs font-bold text-stone-500 mb-1">Görsel URL</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.imageUrl} onChange={e => setCurrentLand({...currentLand, imageUrl: e.target.value})} />
+                    <div><label className="block text-xs font-bold text-stone-500 mb-1">Görsel URL</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.imageUrl} onChange={e => setCurrentLand({ ...currentLand, imageUrl: e.target.value })} />
                       {currentLand.imageUrl && (<div className="mt-2 relative h-32 w-full rounded-lg overflow-hidden border border-stone-200"><img src={currentLand.imageUrl} alt="Önizleme" className="w-full h-full object-cover" onError={(e) => { (e.target as HTMLImageElement).src = 'https://placehold.co/600x400?text=Gorsel+Yok'; }} /></div>)}
                     </div>
-                    <div><label className="block text-xs font-bold text-stone-500 mb-1">Ada</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.ada || ''} onChange={e => setCurrentLand({...currentLand, ada: e.target.value})} /></div>
-                    <div><label className="block text-xs font-bold text-stone-500 mb-1">Parsel</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.parsel || ''} onChange={e => setCurrentLand({...currentLand, parsel: e.target.value})} /></div>
-                    <div className="col-span-2"><label className="block text-xs font-bold text-stone-500 mb-1">Açıklama</label><textarea rows={3} className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.description} onChange={e => setCurrentLand({...currentLand, description: e.target.value})} /></div>
-                    <div className="col-span-2"><label className="block text-xs font-bold text-stone-500 mb-1">Özellikler (Virgülle ayırın)</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.features?.join(', ')} onChange={e => setCurrentLand({...currentLand, features: e.target.value.split(',').map(s => s.trim())})} placeholder="Deniz Manzaralı, Yolu Açık, ..." /></div>
+                    <div><label className="block text-xs font-bold text-stone-500 mb-1">Ada</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.ada || ''} onChange={e => setCurrentLand({ ...currentLand, ada: e.target.value })} /></div>
+                    <div><label className="block text-xs font-bold text-stone-500 mb-1">Parsel</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.parsel || ''} onChange={e => setCurrentLand({ ...currentLand, parsel: e.target.value })} /></div>
+                    <div className="col-span-2"><label className="block text-xs font-bold text-stone-500 mb-1">Açıklama</label><textarea rows={3} className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.description || ''} onChange={e => setCurrentLand({ ...currentLand, description: e.target.value })} /></div>
+                    <div className="col-span-2"><label className="block text-xs font-bold text-stone-500 mb-1">Özellikler (Virgülle ayırın)</label><input className="w-full p-2 border rounded text-stone-900 font-medium" value={currentLand.features?.join(', ')} onChange={e => setCurrentLand({ ...currentLand, features: e.target.value.split(',').map(s => s.trim()) })} placeholder="Deniz Manzaralı, Yolu Açık, ..." /></div>
                   </div>
                   <div className="mt-6 flex justify-end gap-3"><button onClick={() => setIsEditing(false)} className="px-4 py-2 text-stone-500 font-bold hover:bg-stone-100 rounded-lg">İptal</button><button onClick={handleSave} className="px-6 py-2 bg-brand text-white font-bold rounded-lg hover:bg-brand-hover flex items-center gap-2 transition-all shadow-sm"><Save size={18} /> Kaydet</button></div>
                 </div>
@@ -312,8 +312,8 @@ export default function AdminPage() {
                           </div>
                         </td>
                         <td className="p-4 text-right">
-                          <Link 
-                            href={`/proposal/${proposal.id}`} 
+                          <Link
+                            href={`/proposal/${proposal.id}`}
                             target="_blank"
                             className="inline-flex items-center gap-2 text-brand hover:text-brand-hover font-bold hover:underline"
                           >
@@ -354,11 +354,11 @@ export default function AdminPage() {
                 <div className="grid gap-6">
                   <div>
                     <label className="block text-xs font-bold text-stone-600 mb-2 uppercase tracking-wide">Profil Fotoğrafı URL</label>
-                    <div className="relative"><ImageIcon className="absolute left-3 top-3.5 text-stone-400" size={20} /><input type="text" value={settings.senderImage || ''} onChange={(e) => setSettings({...settings, senderImage: e.target.value})} className="w-full pl-10 p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-brand outline-none text-stone-900 font-medium" placeholder="Görsel URL'si..." /></div>
+                    <div className="relative"><ImageIcon className="absolute left-3 top-3.5 text-stone-400" size={20} /><input type="text" value={settings.senderImage || ''} onChange={(e) => setSettings({ ...settings, senderImage: e.target.value })} className="w-full pl-10 p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-brand outline-none text-stone-900 font-medium" placeholder="Görsel URL'si..." /></div>
                   </div>
-                  <div><label className="block text-xs font-bold text-stone-600 mb-2 uppercase tracking-wide">İsim Soyisim</label><div className="relative"><UserCircle className="absolute left-3 top-3.5 text-stone-400" size={20} /><input type="text" value={settings.senderName} onChange={(e) => setSettings({...settings, senderName: e.target.value})} className="w-full pl-10 p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-brand outline-none text-stone-900 font-medium" required /></div></div>
-                  <div><label className="block text-xs font-bold text-stone-600 mb-2 uppercase tracking-wide">Unvan</label><div className="relative"><Briefcase className="absolute left-3 top-3.5 text-stone-400" size={20} /><input type="text" value={settings.senderTitle} onChange={(e) => setSettings({...settings, senderTitle: e.target.value})} className="w-full pl-10 p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-brand outline-none text-stone-900 font-medium" required /></div></div>
-                  <div><label className="block text-xs font-bold text-stone-600 mb-2 uppercase tracking-wide">Telefon Numarası</label><div className="relative"><Phone className="absolute left-3 top-3.5 text-stone-400" size={20} /><input type="text" value={settings.senderPhone} onChange={(e) => setSettings({...settings, senderPhone: e.target.value})} className="w-full pl-10 p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-brand outline-none text-stone-900 font-medium" required /></div></div>
+                  <div><label className="block text-xs font-bold text-stone-600 mb-2 uppercase tracking-wide">İsim Soyisim</label><div className="relative"><UserCircle className="absolute left-3 top-3.5 text-stone-400" size={20} /><input type="text" value={settings.senderName} onChange={(e) => setSettings({ ...settings, senderName: e.target.value })} className="w-full pl-10 p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-brand outline-none text-stone-900 font-medium" required /></div></div>
+                  <div><label className="block text-xs font-bold text-stone-600 mb-2 uppercase tracking-wide">Unvan</label><div className="relative"><Briefcase className="absolute left-3 top-3.5 text-stone-400" size={20} /><input type="text" value={settings.senderTitle} onChange={(e) => setSettings({ ...settings, senderTitle: e.target.value })} className="w-full pl-10 p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-brand outline-none text-stone-900 font-medium" required /></div></div>
+                  <div><label className="block text-xs font-bold text-stone-600 mb-2 uppercase tracking-wide">Telefon Numarası</label><div className="relative"><Phone className="absolute left-3 top-3.5 text-stone-400" size={20} /><input type="text" value={settings.senderPhone} onChange={(e) => setSettings({ ...settings, senderPhone: e.target.value })} className="w-full pl-10 p-3 border border-stone-300 rounded-lg focus:ring-2 focus:ring-brand outline-none text-stone-900 font-medium" required /></div></div>
                 </div>
                 <div className="pt-4"><button type="submit" disabled={isSavingSettings} className="w-full bg-brand hover:bg-brand-hover text-white font-bold py-4 rounded-xl transition-all flex items-center justify-center gap-2 shadow-lg disabled:opacity-70">{isSavingSettings ? 'Kaydediliyor...' : <><Save size={20} /> Bilgileri Güncelle</>}</button></div>
               </form>
