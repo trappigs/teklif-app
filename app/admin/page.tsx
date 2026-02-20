@@ -153,7 +153,7 @@ export default function AdminPage() {
         <div className="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
           <div className="flex flex-col md:flex-row items-center gap-6">
             <div className="flex items-center gap-3">
-              <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
+              <img src="/logo.webp" alt="Logo" className="w-10 h-10 object-contain" />
               <h1 className="text-3xl font-serif font-bold text-brand-dark">Yönetim Paneli</h1>
             </div>
             <div className="flex bg-white rounded-lg p-1 border border-stone-200 shadow-sm overflow-x-auto">

@@ -22,7 +22,7 @@ export default function PortfolioPage() {
     setLoading(true);
     const newLimit = reset ? 12 : limit + 12;
     const data = await getLands(search, newLimit + 1, showOnlyInstallment);
-
+    
     const hasMoreData = data.length > newLimit;
     const finalData = hasMoreData ? data.slice(0, newLimit) : data;
 
@@ -44,15 +44,15 @@ export default function PortfolioPage() {
         <div className="bg-white p-4 rounded-2xl shadow-sm border border-stone-200 mb-8 flex flex-col md:flex-row gap-4 sticky top-24 z-40">
           <div className="relative flex-grow">
             <Search className="absolute left-3 top-3.5 text-stone-400" size={20} />
-            <input
-              type="text"
-              placeholder="İl, İlçe veya Mahalle ara..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full pl-10 p-3 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand outline-none text-stone-900 font-medium bg-stone-50 focus:bg-white transition-colors"
+            <input 
+              type="text" 
+              placeholder="İl, İlçe veya Mahalle ara..." 
+              value={search} 
+              onChange={(e) => setSearch(e.target.value)} 
+              className="w-full pl-10 p-3 border border-stone-200 rounded-xl focus:ring-2 focus:ring-brand outline-none text-stone-900 font-medium bg-stone-50 focus:bg-white transition-colors" 
             />
           </div>
-          <button
+          <button 
             onClick={() => setShowOnlyInstallment(!showOnlyInstallment)}
             className={`px-6 py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition-all whitespace-nowrap border ${showOnlyInstallment ? 'bg-brand text-white border-brand shadow-md' : 'bg-white text-stone-600 border-stone-200 hover:border-brand hover:text-brand'}`}
           >
@@ -71,22 +71,22 @@ export default function PortfolioPage() {
                 </div>
               )}
               <div className="h-56 overflow-hidden relative bg-brand-dark flex items-center justify-center">
-                <img
-                  src="/logo.png"
-                  alt="Logo Placeholder"
+                <img 
+                  src="/logo.webp" 
+                  alt="Logo Placeholder" 
                   className="w-24 h-24 object-contain brightness-0 invert"
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />
-
+                
                 {land.imageUrl ? (
-                  <img
-                    src={land.imageUrl}
-                    alt={land.title}
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-10"
+                  <img 
+                    src={land.imageUrl} 
+                    alt={land.title} 
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 z-10" 
                     onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                   />
                 ) : null}
-
+                
                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4 pt-12 z-20">
                   <div className="flex items-center text-white text-sm font-medium">
                     <MapPin size={16} className="mr-1" />
@@ -129,7 +129,7 @@ export default function PortfolioPage() {
             <Search size={48} className="mx-auto text-stone-300 mb-4" />
             <h3 className="text-xl font-bold text-stone-700 mb-2">Sonuç Bulunamadı</h3>
             <p className="text-stone-500">Arama kriterlerinize uygun arsa bulunamadı.</p>
-            <button onClick={() => { setSearch(''); setShowOnlyInstallment(false); }} className="mt-6 text-brand font-bold hover:underline">Tümünü Göster</button>
+            <button onClick={() => {setSearch(''); setShowOnlyInstallment(false);}} className="mt-6 text-brand font-bold hover:underline">Tümünü Göster</button>
           </div>
         )}
 

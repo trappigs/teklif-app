@@ -227,7 +227,7 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
             <div>
               <div className="flex items-center gap-3 mb-1">
                 <div className="w-16 h-16 flex-shrink-0 flex items-center justify-center">
-                  <img src="/logo.png" alt="Logo" className="w-full h-full object-contain" />
+                  <img src="/logo.webp" alt="Logo" className="w-full h-full object-contain" />
                 </div>
                 <div>
                   <h1 className="text-2xl md:text-3xl font-serif font-bold text-brand-dark flex flex-wrap items-center gap-x-2 leading-tight">
@@ -276,7 +276,7 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                   <div className="flex flex-col md:flex-row gap-8 mb-8 border-b md:border-b-0 pb-8 md:pb-0 border-stone-100 last:border-0 last:pb-0 print:flex-row">
                     <div className="w-full md:w-1/3 h-64 md:h-56 rounded-2xl overflow-hidden border border-stone-200 shrink-0 shadow-sm bg-brand-dark relative flex items-center justify-center p-8">
                       <img
-                        src="/logo.png"
+                        src="/logo.webp"
                         alt="Logo Placeholder"
                         className="w-32 h-32 object-contain brightness-0 invert"
                         onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
@@ -376,7 +376,7 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
     <div className="min-h-screen bg-stone-50 py-12">
       <div className="container mx-auto px-4 max-w-5xl">
         <h1 className="text-3xl font-serif font-bold text-brand-dark mb-8 flex items-center gap-3">
-          <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
+          <img src="/logo.webp" alt="Logo" className="w-10 h-10 object-contain" />
           Çoklu Teklif Oluşturucu
         </h1>
         <div className="grid md:grid-cols-3 gap-8">
