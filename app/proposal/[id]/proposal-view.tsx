@@ -181,10 +181,6 @@ export default function ProposalView({ proposal }: ProposalViewProps) {
                     <div className="text-right flex-grow">
                         <span className="text-xl font-light text-stone-700 uppercase tracking-tight">Toplam Portföy Değeri:</span>
                         <p className="text-3xl md:text-4xl font-serif font-bold text-brand-dark">{calculateTotal().toLocaleString('tr-TR')} ₺</p>
-                        <div className="mt-6">
-                            <div className="h-12 w-48 border-b border-dashed border-stone-300 ml-auto mb-2"></div>
-                            <span className="text-[10px] font-bold text-brand-dark uppercase tracking-widest">Yetkili İmza / Kaşe</span>
-                        </div>
                     </div>
                 </div>
 
