@@ -108,8 +108,10 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
       item.cashPrice = newCashPrice;
       item.option1.price = Math.round(newCashPrice * 1.10);
       item.option1.downPayment = Math.round(item.option1.price / 2);
+      item.option1.installmentCount = 12;
       item.option2.price = Math.round(newCashPrice * 1.21);
       item.option2.downPayment = Math.round(item.option2.price / 2);
+      item.option2.installmentCount = 24;
     }
     else if (field.startsWith('option1.')) {
       const subField = field.split('.')[1] as keyof typeof item.option1;
