@@ -243,11 +243,11 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
               </div>
               <div className="flex gap-10">
                 <div>
-                  <h3 className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-1">Tarih</h3>
+                  <h3 className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-1">Teklif Tarihi</h3>
                   <p className="text-stone-800 font-bold">{new Date().toLocaleDateString('tr-TR')}</p>
                 </div>
                 <div>
-                  <h3 className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-1">Geçerlilik</h3>
+                  <h3 className="text-xs font-bold text-stone-400 uppercase tracking-widest mb-1">Geçerlilik Tarihi</h3>
                   <p className="text-stone-800 font-bold">{new Date(validUntil).toLocaleDateString('tr-TR')}</p>
                 </div>
               </div>
