@@ -19,7 +19,7 @@ export default function NavbarContent({ isLoggedIn }: NavbarContentProps) {
         {/* Menu Links - Only for Logged In Users */}
         {isLoggedIn && (
           <div className="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-wider">
-            <Link href="/" className="hover:text-brand transition-colors duration-300">Ana Sayfa</Link>
+            <Link href="/" className="hover:text-brand transition-colors duration-300">Portföy</Link>
             <Link href="/proposal" className="hover:text-brand transition-colors duration-300">Teklif Hazırla</Link>
           </div>
         )}
