@@ -59,7 +59,7 @@ export default function AdminPage() {
 
   const loadProposals = async (user: string) => {
     const proposalsData = await getProposals(user); // Filter by user
-    setProposals(proposalsData.reverse());
+    setProposals(proposalsData);
   };
 
   const handleLogout = async () => {
@@ -269,10 +269,11 @@ export default function AdminPage() {
                 <thead className="bg-stone-50 text-stone-500 uppercase tracking-wider font-bold">
                   <tr>
                     <th className="p-4">Müşteri</th>
+                    <th className="p-4">Teklif Tarihi</th>
                     <th className="p-4">Oluşturan</th>
                     <th className="p-4">İçerik</th>
                     <th className="p-4">Toplam Tutar</th>
-                    <th className="p-4">Durum</th>
+                    <th className="p-4">Geçerlilik</th>
                     <th className="p-4 text-right">İşlem</th>
                   </tr>
                 </thead>
@@ -286,6 +287,12 @@ export default function AdminPage() {
                     return (
                       <tr key={proposal.id} className="hover:bg-brand-light/10 transition-colors">
                         <td className="p-4 font-bold text-stone-800">{proposal.customerName}</td>
+                        <td className="p-4">
+                          <div className="flex items-center gap-2 text-stone-600 font-medium">
+                            <FileText size={14} className="text-brand" />
+                            {new Date(proposal.createdAt).toLocaleDateString('tr-TR')}
+                          </div>
+                        </td>
                         <td className="p-4">
                           <div className="flex flex-col">
                             <span className="font-medium text-stone-700">{proposal.senderName || proposal.createdBy}</span>
@@ -308,7 +315,7 @@ export default function AdminPage() {
                             <span className="bg-emerald-100 text-emerald-700 px-2 py-1 rounded text-xs font-bold border border-emerald-200">Aktif</span>
                           )}
                           <div className="text-[10px] text-stone-400 mt-1">
-                            {new Date(proposal.validUntil).toLocaleDateString('tr-TR')}
+                            Geçerlilik: {new Date(proposal.validUntil).toLocaleDateString('tr-TR')}
                           </div>
                         </td>
                         <td className="p-4 text-right">
