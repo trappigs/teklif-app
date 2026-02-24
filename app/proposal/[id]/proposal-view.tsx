@@ -176,8 +176,9 @@ export default function ProposalView({ proposal }: ProposalViewProps) {
                     </div>
                 </div>
 
-                <div className="mt-12 pt-8 border-t border-stone-200 flex justify-end items-center text-xs text-stone-500 relative z-10 break-inside-avoid">
-                    <div className="text-stone-400 italic">Bereketli Topraklar Gayrimenkul</div>
+                <div className="mt-12 pt-8 border-t border-stone-200 flex justify-between items-center text-xs text-stone-500 relative z-10 break-inside-avoid">
+                    <img src="/logo2.png" alt="Logo" className="h-8 w-auto object-contain opacity-50" />
+                    <div className="text-stone-400 italic">Bereketli Topraklar</div>
                 </div>
             </div>
         </div>
