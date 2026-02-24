@@ -10,6 +10,9 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 export const metadata: Metadata = {
   title: "Bereketli Topraklar | Güvenilir Arsa Yatırımı",
   description: "Doğayla iç içe, geleceğe değer katan arsa fırsatları.",
+  icons: {
+    icon: "/32x32.png",
+  },
 };
 
 export default function RootLayout({
