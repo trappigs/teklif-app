@@ -4,6 +4,26 @@ import ProposalView from './proposal-view';
 
 export const dynamic = 'force-dynamic';
 
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  try {
+    const proposal = await getProposal(id);
+    if (!proposal) return { title: "Teklif Bulunamadı" };
+
+    return {
+      title: `Portföy Teklifi #${proposal.id} | Bereketli Topraklar`,
+      description: `${proposal.customerName || 'Müşterimiz'} için hazırlanan özel yatırım teklifi.`,
+      openGraph: {
+        title: `Portföy Teklifi #${proposal.id} | Bereketli Topraklar`,
+        description: `${proposal.customerName || 'Müşterimiz'} için hazırlanan özel yatırım teklifi.`,
+        images: ["/logo2.png"],
+      },
+    };
+  } catch (error) {
+    return { title: "Bereketli Topraklar" };
+  }
+}
+
 export default async function SharedProposalPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   let proposal;
