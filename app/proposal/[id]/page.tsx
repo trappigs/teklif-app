@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
       openGraph: {
         title: `Portföy Teklifi #${proposal.id} | Bereketli Topraklar`,
         description: `${proposal.customerName || 'Müşterimiz'} için hazırlanan özel yatırım teklifi.`,
-        images: ["/logo2.png"],
+        images: ["/192x192.png"],
       },
     };
   } catch (error) {

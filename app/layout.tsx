@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "Doğayla iç içe, geleceğe değer katan arsa fırsatları.",
   icons: {
     icon: "/32x32.png",
-    apple: "/logo2.png",
+    apple: "/192x192.png",
   },
   openGraph: {
     title: "Bereketli Topraklar | Güvenilir Arsa Yatırımı",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     siteName: "Bereketli Topraklar",
     images: [
       {
-        url: "/logo2.png",
-        width: 800,
-        height: 600,
+        url: "/192x192.png",
+        width: 192,
+        height: 192,
         alt: "Bereketli Topraklar Logo",
       },
     ],
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     type: "website",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Bereketli Topraklar | Güvenilir Arsa Yatırımı",
     description: "Doğayla iç içe, geleceğe değer katan arsa fırsatları.",
-    images: ["/logo2.png"],
+    images: ["/192x192.png"],
   },
 };
 
