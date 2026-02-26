@@ -303,8 +303,24 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                       <div className="grid grid-cols-2 gap-4 text-sm border-t border-stone-100 pt-4 mb-5">
                         <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">Alan</span> <span className="font-bold text-stone-900 text-base">{item.area} m²</span></div>
                         <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">Ada / Parsel</span> <span className="font-bold text-stone-900 text-base">{item.ada} / {item.parsel}</span></div>
-                        <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">İmar Durumu</span> <span className="font-bold text-stone-900 text-sm">{item.zoningStatus || '-'}</span></div>
-                        <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">Tapu Durumu</span> <span className="font-bold text-stone-900 text-sm">{item.deedStatus || '-'}</span></div>
+                        <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">İmar Durumu</span> <span className="font-bold text-stone-900 text-sm">{(() => {
+                          const mapping: Record<string, string> = {
+                            'Konut&villa imarli': 'Konut & Villa İmarlı',
+                            'Ticari imarli': 'Ticari İmarlı',
+                            'Tarla': 'Tarla',
+                            'Bahce': 'Bahçe',
+                            'Mustakil tapu': 'Müstakil Tapu',
+                            'Hisseli tapu': 'Hisseli Tapu'
+                          };
+                          return mapping[item.zoningStatus || ''] || item.zoningStatus || '-';
+                        })()}</span></div>
+                        <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">Tapu Durumu</span> <span className="font-bold text-stone-900 text-sm">{(() => {
+                          const mapping: Record<string, string> = {
+                            'Mustakil tapu': 'Müstakil Tapu',
+                            'Hisseli tapu': 'Hisseli Tapu'
+                          };
+                          return mapping[item.deedStatus || ''] || item.deedStatus || '-';
+                        })()}</span></div>
                       </div>
                       <div className="bg-white rounded-xl border border-stone-200 overflow-hidden shadow-sm">
                         <table className="w-full text-left table-fixed">
@@ -325,7 +341,7 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                             </tr>
                             {item.option1.price > 0 && (
                               <tr>
-                                <td className="py-3 px-2 md:px-4 font-bold text-stone-700 uppercase">{item.option1.installmentCount} AY VADE</td>
+                                <td className="py-3 px-2 md:px-4 font-bold text-stone-700 uppercase">TAKSİTLİ</td>
                                 <td className="py-3 px-2 md:px-4 text-right whitespace-nowrap">{item.option1.price.toLocaleString('tr-TR')} ₺</td>
                                 <td className="py-3 px-2 md:px-4 text-right whitespace-nowrap">{item.option1.downPayment.toLocaleString('tr-TR')} ₺</td>
                                 <td className="py-3 px-2 md:px-4 text-right font-bold text-brand whitespace-nowrap">{item.option1.installmentCount}x {calculateMonthly(item.option1.price, item.option1.downPayment, item.option1.installmentCount).toLocaleString('tr-TR', { maximumFractionDigits: 0 })} ₺</td>
@@ -333,7 +349,7 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                             )}
                             {item.option2.price > 0 && (
                               <tr>
-                                <td className="py-3 px-2 md:px-4 font-bold text-stone-700 uppercase">{item.option2.installmentCount} AY VADE</td>
+                                <td className="py-3 px-2 md:px-4 font-bold text-stone-700 uppercase">TAKSİTLİ</td>
                                 <td className="py-3 px-2 md:px-4 text-right whitespace-nowrap">{item.option2.price.toLocaleString('tr-TR')} ₺</td>
                                 <td className="py-3 px-2 md:px-4 text-right whitespace-nowrap">{item.option2.downPayment.toLocaleString('tr-TR')} ₺</td>
                                 <td className="py-3 px-2 md:px-4 text-right font-bold text-emerald-700 whitespace-nowrap">{item.option2.installmentCount}x {calculateMonthly(item.option2.price, item.option2.downPayment, item.option2.installmentCount).toLocaleString('tr-TR', { maximumFractionDigits: 0 })} ₺</td>
@@ -499,13 +515,18 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                       <div>
                         <label className="block text-xs font-bold text-stone-600 mb-2 uppercase">İmar Durumu</label>
                         <div className="flex flex-wrap gap-2">
-                          {['Konut&villa imarli', 'Ticari imarli', 'Tarla', 'Bahce'].map(status => (
+                          {[
+                            { key: 'Konut&villa imarli', label: 'Konut & Villa İmarlı' },
+                            { key: 'Ticari imarli', label: 'Ticari İmarlı' },
+                            { key: 'Tarla', label: 'Tarla' },
+                            { key: 'Bahce', label: 'Bahçe' }
+                          ].map(status => (
                             <button
-                              key={status}
-                              onClick={() => updateItem(index, 'zoningStatus', status)}
-                              className={`px-3 py-2 rounded-lg text-xs font-bold border transition-all ${item.zoningStatus === status ? 'bg-brand text-white border-brand shadow-sm' : 'bg-white text-stone-500 border-stone-200 hover:border-brand-light'}`}
+                              key={status.key}
+                              onClick={() => updateItem(index, 'zoningStatus', status.key)}
+                              className={`px-3 py-2 rounded-lg text-xs font-bold border transition-all ${item.zoningStatus === status.key ? 'bg-brand text-white border-brand shadow-sm' : 'bg-white text-stone-500 border-stone-200 hover:border-brand-light'}`}
                             >
-                              {status}
+                              {status.label}
                             </button>
                           ))}
                         </div>
@@ -513,13 +534,16 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                       <div>
                         <label className="block text-xs font-bold text-stone-600 mb-2 uppercase">Tapu Durumu</label>
                         <div className="flex flex-wrap gap-2">
-                          {['Mustakil tapu', 'Hisseli tapu'].map(status => (
+                          {[
+                            { key: 'Mustakil tapu', label: 'Müstakil Tapu' },
+                            { key: 'Hisseli tapu', label: 'Hisseli Tapu' }
+                          ].map(status => (
                             <button
-                              key={status}
-                              onClick={() => updateItem(index, 'deedStatus', status)}
-                              className={`px-3 py-2 rounded-lg text-xs font-bold border transition-all ${item.deedStatus === status ? 'bg-brand text-white border-brand shadow-sm' : 'bg-white text-stone-500 border-stone-200 hover:border-brand-light'}`}
+                              key={status.key}
+                              onClick={() => updateItem(index, 'deedStatus', status.key)}
+                              className={`px-3 py-2 rounded-lg text-xs font-bold border transition-all ${item.deedStatus === status.key ? 'bg-brand text-white border-brand shadow-sm' : 'bg-white text-stone-500 border-stone-200 hover:border-brand-light'}`}
                             >
-                              {status}
+                              {status.label}
                             </button>
                           ))}
                         </div>

@@ -99,8 +99,34 @@ export default function ProposalView({ proposal }: ProposalViewProps) {
                                         <div className="grid grid-cols-2 gap-4 text-sm border-t border-stone-100 pt-4 mb-5">
                                             <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">Alan</span> <span className="font-bold text-stone-900 text-base">{item.area} m²</span></div>
                                             <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">Ada / Parsel</span> <span className="font-bold text-stone-900 text-base">{item.ada} / {item.parsel}</span></div>
-                                            <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">İmar Durumu</span> <span className="font-bold text-stone-900 text-sm">{item.zoningStatus || '-'}</span></div>
-                                            <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">Tapu Durumu</span> <span className="font-bold text-stone-900 text-sm">{item.deedStatus || '-'}</span></div>
+                                            <div className="bg-stone-50 p-2 rounded-lg">
+                                                <span className="text-stone-500 text-[10px] block uppercase font-bold">İmar Durumu</span>
+                                                <span className="font-bold text-stone-900 text-sm">
+                                                    {(() => {
+                                                        const mapping: Record<string, string> = {
+                                                            'Konut&villa imarli': 'Konut & Villa İmarlı',
+                                                            'Ticari imarli': 'Ticari İmarlı',
+                                                            'Tarla': 'Tarla',
+                                                            'Bahce': 'Bahçe',
+                                                            'Mustakil tapu': 'Müstakil Tapu',
+                                                            'Hisseli tapu': 'Hisseli Tapu'
+                                                        };
+                                                        return mapping[item.zoningStatus || ''] || item.zoningStatus || '-';
+                                                    })()}
+                                                </span>
+                                            </div>
+                                            <div className="bg-stone-50 p-2 rounded-lg">
+                                                <span className="text-stone-500 text-[10px] block uppercase font-bold">Tapu Durumu</span>
+                                                <span className="font-bold text-stone-900 text-sm">
+                                                    {(() => {
+                                                        const mapping: Record<string, string> = {
+                                                            'Mustakil tapu': 'Müstakil Tapu',
+                                                            'Hisseli tapu': 'Hisseli Tapu'
+                                                        };
+                                                        return mapping[item.deedStatus || ''] || item.deedStatus || '-';
+                                                    })()}
+                                                </span>
+                                            </div>
                                         </div>
 
                                         {/* Financial Plan Table */}
