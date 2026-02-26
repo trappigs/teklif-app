@@ -29,6 +29,8 @@ export interface ProposalItem {
     downPayment: number;
     installmentCount: number;
   };
+  zoningStatus?: string;
+  deedStatus?: string;
 }
 
 export interface Proposal {

@@ -68,29 +68,40 @@ export default function AdminPage() {
 
   const handleExport = () => {
     // Flatten proposals data for Excel
+    console.log('Exporting proposals:', proposals);
     const exportData = proposals.flatMap(p =>
-      p.items.map(item => ({
-        'Teklif ID': p.id,
-        'Oluşturulma Tarihi': new Date(p.createdAt).toLocaleDateString('tr-TR'),
-        'Geçerlilik Tarihi': new Date(p.validUntil).toLocaleDateString('tr-TR'),
-        'Müşteri Adı': p.customerName,
-        'Oluşturan Uzman': p.createdBy,
-        'Hazırlayan İsim': p.senderName,
-        'Arsa Başlık': item.land.title,
-        'Konum': item.land.location,
-        'Ada': item.ada,
-        'Parsel': item.parsel,
-        'Alan (m2)': item.area,
-        'Peşin Fiyat (TL)': item.cashPrice,
-        'Seçenek 1 Fiyat (TL)': item.option1.price,
-        'Seçenek 1 Peşinat (TL)': item.option1.downPayment,
-        'Seçenek 1 Taksit (Ay)': item.option1.installmentCount,
-        'Seçenek 2 Fiyat (TL)': item.option2.price,
-        'Seçenek 2 Peşinat (TL)': item.option2.downPayment,
-        'Seçenek 2 Taksit (Ay)': item.option2.installmentCount,
-        'Genel Notlar': p.globalNotes
-      }))
+      p.items.map(item => {
+        console.log('Exporting item:', item);
+        return {
+          'Teklif ID': p.id,
+          'Oluşturulma Tarihi': new Date(p.createdAt).toLocaleDateString('tr-TR'),
+          'Geçerlilik Tarihi': new Date(p.validUntil).toLocaleDateString('tr-TR'),
+          'Müşteri Adı': p.customerName,
+          'Oluşturan Uzman': p.createdBy,
+          'Hazırlayan İsim': p.senderName,
+          'Arsa Başlık': item.land.title,
+          'Konum': item.land.location,
+          'Ada': item.ada,
+          'Parsel': item.parsel,
+          'Alan (m2)': item.area,
+          'İmar Durumu': item.zoningStatus || '',
+          'Tapu Durumu': item.deedStatus || '',
+          'Peşin Fiyat (TL)': item.cashPrice,
+          'Seçenek 1 Fiyat (TL)': item.option1.price,
+          'Seçenek 1 Peşinat (TL)': item.option1.downPayment,
+          'Seçenek 1 Taksit (Ay)': item.option1.installmentCount,
+          'Seçenek 2 Fiyat (TL)': item.option2.price,
+          'Seçenek 2 Peşinat (TL)': item.option2.downPayment,
+          'Seçenek 2 Taksit (Ay)': item.option2.installmentCount,
+          'Genel Notlar': p.globalNotes
+        };
+      })
     );
+
+    if (exportData.length === 0) {
+      alert('Dışa aktarılacak veri bulunamadı.');
+      return;
+    }
 
     const ws = XLSX.utils.json_to_sheet(exportData);
     const wb = XLSX.utils.book_new();

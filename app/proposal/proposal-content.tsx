@@ -64,7 +64,9 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
       parsel: '',
       area: '',
       option1: { price: 0, downPayment: 0, installmentCount: 0 },
-      option2: { price: 0, downPayment: 0, installmentCount: 0 }
+      option2: { price: 0, downPayment: 0, installmentCount: 0 },
+      zoningStatus: '',
+      deedStatus: ''
     }]);
     setSelectedLandId('');
     setSearchTerm('');
@@ -100,30 +102,40 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
   };
 
   const updateItem = (index: number, field: string, value: any) => {
-    const newItems = [...proposalItems];
-    const item = newItems[index];
+    setProposalItems(prevItems => {
+      const newItems = [...prevItems];
+      const item = { ...newItems[index] };
 
-    if (field === 'cashPrice') {
-      const newCashPrice = value === '' ? 0 : Number(value);
-      item.cashPrice = newCashPrice;
-      item.option1.price = Math.round(newCashPrice * 1.10);
-      item.option1.downPayment = Math.round(item.option1.price / 2);
-      item.option1.installmentCount = 12;
-      item.option2.price = Math.round(newCashPrice * 1.21);
-      item.option2.downPayment = Math.round(item.option2.price / 2);
-      item.option2.installmentCount = 24;
-    }
-    else if (field.startsWith('option1.')) {
-      const subField = field.split('.')[1] as keyof typeof item.option1;
-      item.option1[subField] = value === '' ? 0 : value;
-    } else if (field.startsWith('option2.')) {
-      const subField = field.split('.')[1] as keyof typeof item.option2;
-      item.option2[subField] = value === '' ? 0 : value;
-    } else {
-      // @ts-ignore
-      item[field] = value;
-    }
-    setProposalItems(newItems);
+      if (field === 'cashPrice') {
+        const newCashPrice = value === '' ? 0 : Number(value);
+        item.cashPrice = newCashPrice;
+        item.option1 = {
+          ...item.option1,
+          price: Math.round(newCashPrice * 1.10),
+          downPayment: Math.round((newCashPrice * 1.10) / 2),
+          installmentCount: 12
+        };
+        item.option2 = {
+          ...item.option2,
+          price: Math.round(newCashPrice * 1.21),
+          downPayment: Math.round((newCashPrice * 1.21) / 2),
+          installmentCount: 24
+        };
+      }
+      else if (field.startsWith('option1.')) {
+        const subField = field.split('.')[1] as keyof typeof item.option1;
+        item.option1 = { ...item.option1, [subField]: value === '' ? 0 : value };
+      } else if (field.startsWith('option2.')) {
+        const subField = field.split('.')[1] as keyof typeof item.option2;
+        item.option2 = { ...item.option2, [subField]: value === '' ? 0 : value };
+      } else {
+        // @ts-ignore
+        item[field] = value;
+      }
+
+      newItems[index] = item;
+      return newItems;
+    });
   };
 
   const handlePrint = () => {
@@ -291,6 +303,8 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                       <div className="grid grid-cols-2 gap-4 text-sm border-t border-stone-100 pt-4 mb-5">
                         <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">Alan</span> <span className="font-bold text-stone-900 text-base">{item.area} m²</span></div>
                         <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">Ada / Parsel</span> <span className="font-bold text-stone-900 text-base">{item.ada} / {item.parsel}</span></div>
+                        <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">İmar Durumu</span> <span className="font-bold text-stone-900 text-sm">{item.zoningStatus || '-'}</span></div>
+                        <div className="bg-stone-50 p-2 rounded-lg"><span className="text-stone-500 text-[10px] block uppercase font-bold">Tapu Durumu</span> <span className="font-bold text-stone-900 text-sm">{item.deedStatus || '-'}</span></div>
                       </div>
                       <div className="bg-white rounded-xl border border-stone-200 overflow-hidden shadow-sm">
                         <table className="w-full text-left table-fixed">
@@ -360,7 +374,7 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
             <div className="text-stone-400 italic">Bereketli Topraklar</div>
           </div>
         </div>
-      </div>
+      </div >
     );
   }
 
@@ -480,6 +494,38 @@ export default function ProposalContent({ availableLands, defaultSettings }: Pro
                       <div><label className="block text-xs font-bold text-stone-600 mb-1">Ada</label><input type="text" value={item.ada} onChange={(e) => updateItem(index, 'ada', e.target.value)} className="w-full p-2 border border-stone-300 rounded outline-none text-stone-900 bg-white" /></div>
                       <div><label className="block text-xs font-bold text-stone-600 mb-1">Parsel</label><input type="text" value={item.parsel} onChange={(e) => updateItem(index, 'parsel', e.target.value)} className="w-full p-2 border border-stone-300 rounded outline-none text-stone-900 bg-white" /></div>
                     </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <label className="block text-xs font-bold text-stone-600 mb-2 uppercase">İmar Durumu</label>
+                        <div className="flex flex-wrap gap-2">
+                          {['Konut&villa imarli', 'Ticari imarli', 'Tarla', 'Bahce'].map(status => (
+                            <button
+                              key={status}
+                              onClick={() => updateItem(index, 'zoningStatus', status)}
+                              className={`px-3 py-2 rounded-lg text-xs font-bold border transition-all ${item.zoningStatus === status ? 'bg-brand text-white border-brand shadow-sm' : 'bg-white text-stone-500 border-stone-200 hover:border-brand-light'}`}
+                            >
+                              {status}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                      <div>
+                        <label className="block text-xs font-bold text-stone-600 mb-2 uppercase">Tapu Durumu</label>
+                        <div className="flex flex-wrap gap-2">
+                          {['Mustakil tapu', 'Hisseli tapu'].map(status => (
+                            <button
+                              key={status}
+                              onClick={() => updateItem(index, 'deedStatus', status)}
+                              className={`px-3 py-2 rounded-lg text-xs font-bold border transition-all ${item.deedStatus === status ? 'bg-brand text-white border-brand shadow-sm' : 'bg-white text-stone-500 border-stone-200 hover:border-brand-light'}`}
+                            >
+                              {status}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-stone-50 p-4 rounded-lg border border-stone-100">
                       <div>
                         <h5 className="font-bold text-brand-dark text-sm mb-3 border-b border-brand/10 pb-1 flex justify-between items-center">
